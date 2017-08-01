@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DD8506366529D9B015D1955 /* libPods-WhatToEat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56174966826336931C62D8FC /* libPods-WhatToEat.a */; };
+		3E06896F1F301905003E1D65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E06896E1F301905003E1D65 /* main.m */; };
+		3E0689721F301905003E1D65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689711F301905003E1D65 /* AppDelegate.m */; };
+		3E0689751F301905003E1D65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689741F301905003E1D65 /* ViewController.m */; };
+		3E0689781F301905003E1D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0689761F301905003E1D65 /* Main.storyboard */; };
+		3E06897A1F301905003E1D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0689791F301905003E1D65 /* Assets.xcassets */; };
+		3E06897D1F301905003E1D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E06897B1F301905003E1D65 /* LaunchScreen.storyboard */; };
+		3E0689881F301905003E1D65 /* WhatToEatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689871F301905003E1D65 /* WhatToEatTests.m */; };
+		3E0689931F301905003E1D65 /* WhatToEatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689921F301905003E1D65 /* WhatToEatUITests.m */; };
+		3E0689A41F306C26003E1D65 /* YJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A31F306C26003E1D65 /* YJTableViewController.m */; };
+		3E0689A71F306C99003E1D65 /* YJFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A61F306C99003E1D65 /* YJFood.m */; };
+		3E0689AA1F306D3B003E1D65 /* YJFoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A91F306D3B003E1D65 /* YJFoods.m */; };
+		3E0689AD1F3071EA003E1D65 /* YJEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E0689841F301905003E1D65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0689621F301905003E1D65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0689691F301905003E1D65;
+			remoteInfo = WhatToEat;
+		};
+		3E06898F1F301905003E1D65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0689621F301905003E1D65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0689691F301905003E1D65;
+			remoteInfo = WhatToEat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39DF8A39FBC24C19D4193BA6 /* Pods-WhatToEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat.release.xcconfig"; sourceTree = "<group>"; };
+		3E06896A1F301905003E1D65 /* WhatToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E06896E1F301905003E1D65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E0689701F301905003E1D65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E0689711F301905003E1D65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3E0689731F301905003E1D65 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3E0689741F301905003E1D65 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3E0689771F301905003E1D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E0689791F301905003E1D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E06897C1F301905003E1D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E06897E1F301905003E1D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0689831F301905003E1D65 /* WhatToEatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatToEatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0689871F301905003E1D65 /* WhatToEatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhatToEatTests.m; sourceTree = "<group>"; };
+		3E0689891F301905003E1D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E06898E1F301905003E1D65 /* WhatToEatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatToEatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0689921F301905003E1D65 /* WhatToEatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhatToEatUITests.m; sourceTree = "<group>"; };
+		3E0689941F301905003E1D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0689A21F306C26003E1D65 /* YJTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewController.h; sourceTree = "<group>"; };
+		3E0689A31F306C26003E1D65 /* YJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewController.m; sourceTree = "<group>"; };
+		3E0689A51F306C99003E1D65 /* YJFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJFood.h; sourceTree = "<group>"; };
+		3E0689A61F306C99003E1D65 /* YJFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFood.m; sourceTree = "<group>"; };
+		3E0689A81F306D3B003E1D65 /* YJFoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJFoods.h; sourceTree = "<group>"; };
+		3E0689A91F306D3B003E1D65 /* YJFoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFoods.m; sourceTree = "<group>"; };
+		3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEditTableViewController.h; sourceTree = "<group>"; };
+		3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJEditTableViewController.m; sourceTree = "<group>"; };
+		56174966826336931C62D8FC /* libPods-WhatToEat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatToEat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB5D570B1665CBFA111846EC /* Pods-WhatToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E0689671F301905003E1D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DD8506366529D9B015D1955 /* libPods-WhatToEat.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0689801F301905003E1D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E06898B1F301905003E1D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E0689611F301905003E1D65 = {
+			isa = PBXGroup;
+			children = (
+				3E06896C1F301905003E1D65 /* WhatToEat */,
+				3E0689861F301905003E1D65 /* WhatToEatTests */,
+				3E0689911F301905003E1D65 /* WhatToEatUITests */,
+				3E06896B1F301905003E1D65 /* Products */,
+				BEA25DFA608BC9D76DEEF9B2 /* Pods */,
+				F93C441944844A941E56EBA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E06896B1F301905003E1D65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E06896A1F301905003E1D65 /* WhatToEat.app */,
+				3E0689831F301905003E1D65 /* WhatToEatTests.xctest */,
+				3E06898E1F301905003E1D65 /* WhatToEatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E06896C1F301905003E1D65 /* WhatToEat */ = {
+			isa = PBXGroup;
+			children = (
+				3E0689701F301905003E1D65 /* AppDelegate.h */,
+				3E0689711F301905003E1D65 /* AppDelegate.m */,
+				3E0689731F301905003E1D65 /* ViewController.h */,
+				3E0689741F301905003E1D65 /* ViewController.m */,
+				3E0689A21F306C26003E1D65 /* YJTableViewController.h */,
+				3E0689A31F306C26003E1D65 /* YJTableViewController.m */,
+				3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */,
+				3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */,
+				3E0689761F301905003E1D65 /* Main.storyboard */,
+				3E0689791F301905003E1D65 /* Assets.xcassets */,
+				3E06897B1F301905003E1D65 /* LaunchScreen.storyboard */,
+				3E06897E1F301905003E1D65 /* Info.plist */,
+				3E06896D1F301905003E1D65 /* Supporting Files */,
+				3E0689A51F306C99003E1D65 /* YJFood.h */,
+				3E0689A61F306C99003E1D65 /* YJFood.m */,
+				3E0689A81F306D3B003E1D65 /* YJFoods.h */,
+				3E0689A91F306D3B003E1D65 /* YJFoods.m */,
+			);
+			path = WhatToEat;
+			sourceTree = "<group>";
+		};
+		3E06896D1F301905003E1D65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E06896E1F301905003E1D65 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E0689861F301905003E1D65 /* WhatToEatTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E0689871F301905003E1D65 /* WhatToEatTests.m */,
+				3E0689891F301905003E1D65 /* Info.plist */,
+			);
+			path = WhatToEatTests;
+			sourceTree = "<group>";
+		};
+		3E0689911F301905003E1D65 /* WhatToEatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E0689921F301905003E1D65 /* WhatToEatUITests.m */,
+				3E0689941F301905003E1D65 /* Info.plist */,
+			);
+			path = WhatToEatUITests;
+			sourceTree = "<group>";
+		};
+		BEA25DFA608BC9D76DEEF9B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB5D570B1665CBFA111846EC /* Pods-WhatToEat.debug.xcconfig */,
+				39DF8A39FBC24C19D4193BA6 /* Pods-WhatToEat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F93C441944844A941E56EBA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56174966826336931C62D8FC /* libPods-WhatToEat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E0689691F301905003E1D65 /* WhatToEat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E0689971F301905003E1D65 /* Build configuration list for PBXNativeTarget "WhatToEat" */;
+			buildPhases = (
+				3B832714E906100674963F2F /* [CP] Check Pods Manifest.lock */,
+				3E0689661F301905003E1D65 /* Sources */,
+				3E0689671F301905003E1D65 /* Frameworks */,
+				3E0689681F301905003E1D65 /* Resources */,
+				B99FB665E0EB729EE25298B7 /* [CP] Embed Pods Frameworks */,
+				483809BD2386356A97F704F6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhatToEat;
+			productName = WhatToEat;
+			productReference = 3E06896A1F301905003E1D65 /* WhatToEat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E0689821F301905003E1D65 /* WhatToEatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E06899A1F301905003E1D65 /* Build configuration list for PBXNativeTarget "WhatToEatTests" */;
+			buildPhases = (
+				3E06897F1F301905003E1D65 /* Sources */,
+				3E0689801F301905003E1D65 /* Frameworks */,
+				3E0689811F301905003E1D65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E0689851F301905003E1D65 /* PBXTargetDependency */,
+			);
+			name = WhatToEatTests;
+			productName = WhatToEatTests;
+			productReference = 3E0689831F301905003E1D65 /* WhatToEatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3E06898D1F301905003E1D65 /* WhatToEatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E06899D1F301905003E1D65 /* Build configuration list for PBXNativeTarget "WhatToEatUITests" */;
+			buildPhases = (
+				3E06898A1F301905003E1D65 /* Sources */,
+				3E06898B1F301905003E1D65 /* Frameworks */,
+				3E06898C1F301905003E1D65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E0689901F301905003E1D65 /* PBXTargetDependency */,
+			);
+			name = WhatToEatUITests;
+			productName = WhatToEatUITests;
+			productReference = 3E06898E1F301905003E1D65 /* WhatToEatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E0689621F301905003E1D65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "明星科技";
+				TargetAttributes = {
+					3E0689691F301905003E1D65 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BFQM2YX9WF;
+						ProvisioningStyle = Automatic;
+					};
+					3E0689821F301905003E1D65 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AEY5X5KBCK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3E0689691F301905003E1D65;
+					};
+					3E06898D1F301905003E1D65 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AEY5X5KBCK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3E0689691F301905003E1D65;
+					};
+				};
+			};
+			buildConfigurationList = 3E0689651F301905003E1D65 /* Build configuration list for PBXProject "WhatToEat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E0689611F301905003E1D65;
+			productRefGroup = 3E06896B1F301905003E1D65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E0689691F301905003E1D65 /* WhatToEat */,
+				3E0689821F301905003E1D65 /* WhatToEatTests */,
+				3E06898D1F301905003E1D65 /* WhatToEatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E0689681F301905003E1D65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E06897D1F301905003E1D65 /* LaunchScreen.storyboard in Resources */,
+				3E06897A1F301905003E1D65 /* Assets.xcassets in Resources */,
+				3E0689781F301905003E1D65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0689811F301905003E1D65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E06898C1F301905003E1D65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B832714E906100674963F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		483809BD2386356A97F704F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B99FB665E0EB729EE25298B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E0689661F301905003E1D65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0689AD1F3071EA003E1D65 /* YJEditTableViewController.m in Sources */,
+				3E0689A41F306C26003E1D65 /* YJTableViewController.m in Sources */,
+				3E0689751F301905003E1D65 /* ViewController.m in Sources */,
+				3E0689AA1F306D3B003E1D65 /* YJFoods.m in Sources */,
+				3E0689A71F306C99003E1D65 /* YJFood.m in Sources */,
+				3E0689721F301905003E1D65 /* AppDelegate.m in Sources */,
+				3E06896F1F301905003E1D65 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E06897F1F301905003E1D65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0689881F301905003E1D65 /* WhatToEatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E06898A1F301905003E1D65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0689931F301905003E1D65 /* WhatToEatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E0689851F301905003E1D65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0689691F301905003E1D65 /* WhatToEat */;
+			targetProxy = 3E0689841F301905003E1D65 /* PBXContainerItemProxy */;
+		};
+		3E0689901F301905003E1D65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0689691F301905003E1D65 /* WhatToEat */;
+			targetProxy = 3E06898F1F301905003E1D65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E0689761F301905003E1D65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E0689771F301905003E1D65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E06897B1F301905003E1D65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E06897C1F301905003E1D65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E0689951F301905003E1D65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E0689961F301905003E1D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E0689981F301905003E1D65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D570B1665CBFA111846EC /* Pods-WhatToEat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BFQM2YX9WF;
+				INFOPLIST_FILE = WhatToEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youjoting.WhatToEat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E0689991F301905003E1D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39DF8A39FBC24C19D4193BA6 /* Pods-WhatToEat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BFQM2YX9WF;
+				INFOPLIST_FILE = WhatToEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youjoting.WhatToEat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3E06899B1F301905003E1D65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AEY5X5KBCK;
+				INFOPLIST_FILE = WhatToEatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JotingYou.WhatToEatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatToEat.app/WhatToEat";
+			};
+			name = Debug;
+		};
+		3E06899C1F301905003E1D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AEY5X5KBCK;
+				INFOPLIST_FILE = WhatToEatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JotingYou.WhatToEatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatToEat.app/WhatToEat";
+			};
+			name = Release;
+		};
+		3E06899E1F301905003E1D65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AEY5X5KBCK;
+				INFOPLIST_FILE = WhatToEatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JotingYou.WhatToEatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WhatToEat;
+			};
+			name = Debug;
+		};
+		3E06899F1F301905003E1D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AEY5X5KBCK;
+				INFOPLIST_FILE = WhatToEatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JotingYou.WhatToEatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WhatToEat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E0689651F301905003E1D65 /* Build configuration list for PBXProject "WhatToEat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0689951F301905003E1D65 /* Debug */,
+				3E0689961F301905003E1D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E0689971F301905003E1D65 /* Build configuration list for PBXNativeTarget "WhatToEat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0689981F301905003E1D65 /* Debug */,
+				3E0689991F301905003E1D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E06899A1F301905003E1D65 /* Build configuration list for PBXNativeTarget "WhatToEatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E06899B1F301905003E1D65 /* Debug */,
+				3E06899C1F301905003E1D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E06899D1F301905003E1D65 /* Build configuration list for PBXNativeTarget "WhatToEatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E06899E1F301905003E1D65 /* Debug */,
+				3E06899F1F301905003E1D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E0689621F301905003E1D65 /* Project object */;
+}
