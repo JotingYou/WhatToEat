@@ -14,9 +14,13 @@
         <scene sceneID="Qfq-tt-7hR">
             <objects>
                 <navigationController id="Hf3-em-KDr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ofm-9w-hL6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="Ofm-9w-hL6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5ZA-P5-rwE"/>
@@ -26,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-1402" y="73"/>
         </scene>
-        <!--吃什么-->
+        <!--扔出去-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -71,9 +75,8 @@
                             <constraint firstItem="Ozr-5a-Obz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wXL-QD-Gm0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="吃什么" id="3kg-mA-ymt">
+                    <navigationItem key="navigationItem" title="扔出去" id="3kg-mA-ymt">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="6Ee-0b-QBl">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <segue destination="XTe-JO-RFX" kind="show" id="DXn-NU-iRu"/>
                             </connections>
@@ -123,7 +126,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="选择清单" id="cgw-rp-iGM">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="87R-sm-S6J">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <segue destination="y7d-wO-3Sm" kind="show" id="wVY-VB-AAZ"/>
                             </connections>
@@ -152,18 +154,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-Dp-J3e">
-                                                    <rect key="frame" x="0.5" y="0.5" width="374" height="42.5"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-Dp-J3e">
+                                                    <rect key="frame" x="-1" y="-1" width="377" height="45.5"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="ap8-Dp-J3e" secondAttribute="bottom" constant="0.5" id="CU5-9a-Zqw"/>
-                                                <constraint firstItem="ap8-Dp-J3e" firstAttribute="leading" secondItem="eUO-T5-ZEo" secondAttribute="leading" constant="0.5" id="OuZ-UR-IeI"/>
-                                                <constraint firstAttribute="trailing" secondItem="ap8-Dp-J3e" secondAttribute="trailing" constant="0.5" id="Vnn-LH-chG"/>
-                                                <constraint firstItem="ap8-Dp-J3e" firstAttribute="top" secondItem="eUO-T5-ZEo" secondAttribute="top" constant="0.5" id="eZJ-q4-7aY"/>
+                                                <constraint firstAttribute="bottom" secondItem="ap8-Dp-J3e" secondAttribute="bottom" constant="-1" id="CU5-9a-Zqw"/>
+                                                <constraint firstItem="ap8-Dp-J3e" firstAttribute="leading" secondItem="eUO-T5-ZEo" secondAttribute="leading" constant="-1" id="OuZ-UR-IeI"/>
+                                                <constraint firstAttribute="trailing" secondItem="ap8-Dp-J3e" secondAttribute="trailing" constant="-1" id="Vnn-LH-chG"/>
+                                                <constraint firstItem="ap8-Dp-J3e" firstAttribute="top" secondItem="eUO-T5-ZEo" secondAttribute="top" constant="-1" id="eZJ-q4-7aY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -179,7 +182,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="编辑" id="qVs-cF-39D">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="qfq-P2-Ap6">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="save:" destination="y7d-wO-3Sm" id="s9h-Bn-VJl"/>
                             </connections>

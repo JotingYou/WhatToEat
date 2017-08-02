@@ -8,7 +8,7 @@
 
 #import "YJEditTableViewController.h"
 #import "YJFoods.h"
-@interface YJEditTableViewController ()
+@interface YJEditTableViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong) YJFoods *foods;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
@@ -22,6 +22,9 @@
     return _foods;
 }
 - (IBAction)save:(id)sender {
+    if (!self.textField.text.length) {
+        return;
+    }
     NSMutableArray *mArray = [NSMutableArray arrayWithArray:self.foods.names];
     [mArray addObject:self.textField.text];
     self.foods.names = [NSArray arrayWithArray:mArray];
@@ -30,6 +33,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.textField.delegate = self;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -37,7 +41,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -54,7 +61,10 @@
 
     return 1;
 }
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self save:nil];
+    return YES;
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

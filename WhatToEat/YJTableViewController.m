@@ -33,6 +33,18 @@
     [super viewWillAppear:animated];
     [self.foods read];
     [self.tableView reloadData];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:0 alpha:1]] forBarMetrics:UIBarMetricsDefault];
+}
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [color setFill];
+    CGContextFillRect(context, rect);
+    UIImage *imgae = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imgae;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

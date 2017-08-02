@@ -39,7 +39,21 @@
     self.originalPoint = self.goButton.center;
 }
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self.foods read];
+    [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:1 alpha:0]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[self imageWithColor:[UIColor colorWithWhite:1 alpha:0]]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+}
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [color setFill];
+    CGContextFillRect(context, rect);
+    UIImage *imgae = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imgae;
 }
 -(void)goAction:(UIPanGestureRecognizer*)panRecognizer{
     CGPoint translatedPoint = [panRecognizer translationInView:self.view];
@@ -71,8 +85,8 @@
         }else{
             //animationX.values = @[@(self.originalPoint.x),@(self.finalPoint.x)];
         }
-        if (self.finalPoint.y<100) {
-            self.finalPoint = CGPointMake(self.finalPoint.x, 150-self.finalPoint.y);
+        if (self.finalPoint.y<50) {
+            self.finalPoint = CGPointMake(self.finalPoint.x, 100-self.finalPoint.y);
            // animationY.values = @[@(self.originalPoint.y),@(100),@(self.finalPoint.y)];
         }else if (self.finalPoint.y>self.view.frame.size.height-50) {
             self.finalPoint = CGPointMake(self.finalPoint.x, 2*(self.view.frame.size.height-50)-self.finalPoint.y);
