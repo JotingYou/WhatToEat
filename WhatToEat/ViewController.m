@@ -95,12 +95,12 @@
             //animationY.values = @[@(self.originalPoint.y),@(self.finalPoint.y)];
         }
 
-        animationX.mass = 5;
+        animationX.mass = 10;
         animationX.stiffness = 10;
         animationX.fromValue = @(self.originalPoint.x);
         animationX.toValue = @(self.finalPoint.x);
         
-        animationY.mass = 5;
+        animationY.mass = 10;
         animationY.stiffness = 10;
         animationY.fromValue = @(self.originalPoint.y);
         animationY.toValue = @(self.finalPoint.y);
@@ -128,15 +128,14 @@
         aniGroup.animations = @[animationX,animationY,aniAlp,aniRot,aniScale];
         aniGroup.duration = 5;
         [self.goButton.layer addAnimation:aniGroup forKey:nil];
-        self.goButton.alpha = 0;
-        self.goButton.center = self.finalPoint;
-        [self success];
-//        if (self.goButton.frame.origin.x>self.aim.frame.origin.x && (self.goButton.frame.origin.x+self.goButton.frame.size.width)<(self.aim.frame.origin.x+self.aim.frame.size.width ) && self.goButton.frame.origin.y>self.aim.frame.origin.y && (self.goButton.frame.origin.y+self.goButton.frame.size.height)<(self.aim.frame.origin.y+self.aim.frame.size.height )) {
-//            
-//            [self success];
-//        }else{
-//            [self fail];
-//        }
+//        self.goButton.alpha = 0;
+//        self.goButton.center = self.finalPoint;
+        if (self.finalPoint.x>self.aim.frame.origin.x && (self.finalPoint.x)<(self.aim.frame.origin.x+self.aim.frame.size.width ) && self.finalPoint.y>self.aim.frame.origin.y && (self.finalPoint.y)<(self.aim.frame.origin.y+self.aim.frame.size.height )) {
+            
+            [self success];
+        }else{
+            [self fail];
+        }
         [panRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
     }
 }
@@ -145,13 +144,13 @@
     NSUInteger row = arc4random() % self.foods.names.count;
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"决定了" message:[NSString stringWithFormat:@"就吃%@",self.foods.names[row]] preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *sure = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [self refresh:nil];
+//        [self refresh:nil];
     }];
     [alertVC addAction:sure];
     [self presentViewController:alertVC animated:YES completion:nil];
 }
 -(void)fail{
- //   NSLog(@"fail");
+//    [self performSelector:@selector(refresh:) withObject:nil afterDelay:5];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

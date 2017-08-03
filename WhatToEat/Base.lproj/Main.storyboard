@@ -14,7 +14,7 @@
         <scene sceneID="Qfq-tt-7hR">
             <objects>
                 <navigationController id="Hf3-em-KDr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="Ofm-9w-hL6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Ofm-9w-hL6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,17 +42,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space" translatesAutoresizingMaskIntoConstraints="NO" id="Ozr-5a-Obz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space2" translatesAutoresizingMaskIntoConstraints="NO" id="Ozr-5a-Obz">
                                 <rect key="frame" x="-405.5" y="0.0" width="1186" height="667"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ozr-5a-Obz" secondAttribute="height" multiplier="16:9" id="qAl-za-C4T"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQn-7p-vxa">
-                                <rect key="frame" x="67" y="144" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="pQn-7p-vxa">
+                                <rect key="frame" x="37" y="94" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="RMA-qY-Qo3"/>
-                                    <constraint firstAttribute="width" constant="240" id="U48-s1-TtZ"/>
+                                    <constraint firstAttribute="height" constant="300" id="RMA-qY-Qo3"/>
+                                    <constraint firstAttribute="width" constant="300" id="U48-s1-TtZ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fi-wD-9iZ">
@@ -69,7 +69,7 @@
                             <constraint firstItem="Ozr-5a-Obz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1a6-Hg-SuZ"/>
                             <constraint firstItem="pQn-7p-vxa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Vo-aB-kgV"/>
                             <constraint firstItem="Ozr-5a-Obz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9g0-4Q-q5w"/>
-                            <constraint firstItem="pQn-7p-vxa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="CvB-7u-KO8"/>
+                            <constraint firstItem="pQn-7p-vxa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="CvB-7u-KO8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9fi-wD-9iZ" secondAttribute="bottom" constant="30" id="WjL-YX-Ahi"/>
                             <constraint firstItem="9fi-wD-9iZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="abI-mL-y1A"/>
                             <constraint firstItem="Ozr-5a-Obz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wXL-QD-Gm0"/>
@@ -198,7 +198,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="space" width="2560" height="1440"/>
+        <image name="moon" width="512" height="512"/>
+        <image name="space2" width="798" height="798"/>
         <image name="stone" width="128" height="128"/>
     </resources>
 </document>
