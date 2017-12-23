@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054A392F1FEE195300978705 /* YJGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 054A392E1FEE195300978705 /* YJGroups.m */; };
+		054A39321FEE274F00978705 /* YJGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054A39311FEE274F00978705 /* YJGroupTableViewController.m */; };
+		054A39391FEE37E300978705 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 054A393B1FEE37E300978705 /* Localizable.strings */; };
+		057DC8A51FEE0B080017CA8C /* YJObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 057DC8A41FEE0B080017CA8C /* YJObject.m */; };
 		3DD8506366529D9B015D1955 /* libPods-WhatToEat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56174966826336931C62D8FC /* libPods-WhatToEat.a */; };
 		3E06896F1F301905003E1D65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E06896E1F301905003E1D65 /* main.m */; };
 		3E0689721F301905003E1D65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689711F301905003E1D65 /* AppDelegate.m */; };
@@ -17,7 +21,6 @@
 		3E0689881F301905003E1D65 /* WhatToEatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689871F301905003E1D65 /* WhatToEatTests.m */; };
 		3E0689931F301905003E1D65 /* WhatToEatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689921F301905003E1D65 /* WhatToEatUITests.m */; };
 		3E0689A41F306C26003E1D65 /* YJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A31F306C26003E1D65 /* YJTableViewController.m */; };
-		3E0689A71F306C99003E1D65 /* YJFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A61F306C99003E1D65 /* YJFood.m */; };
 		3E0689AA1F306D3B003E1D65 /* YJFoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A91F306D3B003E1D65 /* YJFoods.m */; };
 		3E0689AD1F3071EA003E1D65 /* YJEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		054A392D1FEE195300978705 /* YJGroups.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJGroups.h; sourceTree = "<group>"; };
+		054A392E1FEE195300978705 /* YJGroups.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJGroups.m; sourceTree = "<group>"; };
+		054A39301FEE274F00978705 /* YJGroupTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJGroupTableViewController.h; sourceTree = "<group>"; };
+		054A39311FEE274F00978705 /* YJGroupTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJGroupTableViewController.m; sourceTree = "<group>"; };
+		054A39361FEE2F9700978705 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		054A393A1FEE37E300978705 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		054A393C1FEE37E600978705 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		057DC8A01FEE097D0017CA8C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		057DC8A21FEE099E0017CA8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		057DC8A31FEE0B080017CA8C /* YJObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJObject.h; sourceTree = "<group>"; };
+		057DC8A41FEE0B080017CA8C /* YJObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJObject.m; sourceTree = "<group>"; };
 		39DF8A39FBC24C19D4193BA6 /* Pods-WhatToEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat.release.xcconfig"; sourceTree = "<group>"; };
 		3E06896A1F301905003E1D65 /* WhatToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E06896E1F301905003E1D65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,8 +73,6 @@
 		3E0689941F301905003E1D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E0689A21F306C26003E1D65 /* YJTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewController.h; sourceTree = "<group>"; };
 		3E0689A31F306C26003E1D65 /* YJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewController.m; sourceTree = "<group>"; };
-		3E0689A51F306C99003E1D65 /* YJFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJFood.h; sourceTree = "<group>"; };
-		3E0689A61F306C99003E1D65 /* YJFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFood.m; sourceTree = "<group>"; };
 		3E0689A81F306D3B003E1D65 /* YJFoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJFoods.h; sourceTree = "<group>"; };
 		3E0689A91F306D3B003E1D65 /* YJFoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFoods.m; sourceTree = "<group>"; };
 		3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEditTableViewController.h; sourceTree = "<group>"; };
@@ -95,6 +107,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		054A39331FEE275800978705 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				057DC8A31FEE0B080017CA8C /* YJObject.h */,
+				057DC8A41FEE0B080017CA8C /* YJObject.m */,
+				054A392D1FEE195300978705 /* YJGroups.h */,
+				054A392E1FEE195300978705 /* YJGroups.m */,
+				3E0689A81F306D3B003E1D65 /* YJFoods.h */,
+				3E0689A91F306D3B003E1D65 /* YJFoods.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		054A39341FEE276A00978705 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E0689731F301905003E1D65 /* ViewController.h */,
+				3E0689741F301905003E1D65 /* ViewController.m */,
+				054A39301FEE274F00978705 /* YJGroupTableViewController.h */,
+				054A39311FEE274F00978705 /* YJGroupTableViewController.m */,
+				3E0689A21F306C26003E1D65 /* YJTableViewController.h */,
+				3E0689A31F306C26003E1D65 /* YJTableViewController.m */,
+				3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */,
+				3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		3E0689611F301905003E1D65 = {
 			isa = PBXGroup;
 			children = (
@@ -120,23 +160,16 @@
 		3E06896C1F301905003E1D65 /* WhatToEat */ = {
 			isa = PBXGroup;
 			children = (
+				054A39341FEE276A00978705 /* Controllers */,
+				054A39331FEE275800978705 /* Models */,
 				3E0689701F301905003E1D65 /* AppDelegate.h */,
 				3E0689711F301905003E1D65 /* AppDelegate.m */,
-				3E0689731F301905003E1D65 /* ViewController.h */,
-				3E0689741F301905003E1D65 /* ViewController.m */,
-				3E0689A21F306C26003E1D65 /* YJTableViewController.h */,
-				3E0689A31F306C26003E1D65 /* YJTableViewController.m */,
-				3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */,
-				3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */,
 				3E0689761F301905003E1D65 /* Main.storyboard */,
 				3E0689791F301905003E1D65 /* Assets.xcassets */,
 				3E06897B1F301905003E1D65 /* LaunchScreen.storyboard */,
 				3E06897E1F301905003E1D65 /* Info.plist */,
 				3E06896D1F301905003E1D65 /* Supporting Files */,
-				3E0689A51F306C99003E1D65 /* YJFood.h */,
-				3E0689A61F306C99003E1D65 /* YJFood.m */,
-				3E0689A81F306D3B003E1D65 /* YJFoods.h */,
-				3E0689A91F306D3B003E1D65 /* YJFoods.m */,
+				054A393B1FEE37E300978705 /* Localizable.strings */,
 			);
 			path = WhatToEat;
 			sourceTree = "<group>";
@@ -278,6 +311,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 3E0689611F301905003E1D65;
 			productRefGroup = 3E06896B1F301905003E1D65 /* Products */;
@@ -297,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E06897D1F301905003E1D65 /* LaunchScreen.storyboard in Resources */,
+				054A39391FEE37E300978705 /* Localizable.strings in Resources */,
 				3E06897A1F301905003E1D65 /* Assets.xcassets in Resources */,
 				3E0689781F301905003E1D65 /* Main.storyboard in Resources */,
 			);
@@ -371,13 +406,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054A392F1FEE195300978705 /* YJGroups.m in Sources */,
 				3E0689AD1F3071EA003E1D65 /* YJEditTableViewController.m in Sources */,
 				3E0689A41F306C26003E1D65 /* YJTableViewController.m in Sources */,
 				3E0689751F301905003E1D65 /* ViewController.m in Sources */,
+				057DC8A51FEE0B080017CA8C /* YJObject.m in Sources */,
 				3E0689AA1F306D3B003E1D65 /* YJFoods.m in Sources */,
-				3E0689A71F306C99003E1D65 /* YJFood.m in Sources */,
 				3E0689721F301905003E1D65 /* AppDelegate.m in Sources */,
 				3E06896F1F301905003E1D65 /* main.m in Sources */,
+				054A39321FEE274F00978705 /* YJGroupTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +450,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		054A393B1FEE37E300978705 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				054A393A1FEE37E300978705 /* en */,
+				054A393C1FEE37E600978705 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3E0689761F301905003E1D65 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3E0689771F301905003E1D65 /* Base */,
+				057DC8A21FEE099E0017CA8C /* en */,
+				054A39361FEE2F9700978705 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -425,6 +473,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3E06897C1F301905003E1D65 /* Base */,
+				057DC8A01FEE097D0017CA8C /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -436,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -485,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

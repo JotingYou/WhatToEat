@@ -7,28 +7,42 @@
 //
 
 #import "YJEditTableViewController.h"
-#import "YJFoods.h"
+#import "YJObject.h"
+#import "YJGroups.h"
 @interface YJEditTableViewController ()<UITextFieldDelegate>
-@property (nonatomic,strong) YJFoods *foods;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
+@property (strong,nonatomic) YJGroups *groups;
 @end
 
 @implementation YJEditTableViewController
--(YJFoods *)foods{
-    if (!_foods) {
-        _foods = [[YJFoods alloc]init];
+-(YJGroups *)groups{
+    if (!_groups) {
+        _groups = [YJGroups read];
     }
-    return _foods;
+    return _groups;
 }
 - (IBAction)save:(id)sender {
     if (!self.textField.text.length) {
         return;
     }
-    NSMutableArray *mArray = [NSMutableArray arrayWithArray:self.foods.names];
-    [mArray addObject:self.textField.text];
-    self.foods.names = [NSArray arrayWithArray:mArray];
-    [self.foods write];
+    
+    if (self.type == 0) {
+        //添加组内元素
+        NSMutableArray *mArray = [NSMutableArray arrayWithArray:_element.names];
+        [mArray addObject:self.textField.text];
+        _element.names = [NSArray arrayWithArray:mArray];
+        [_element write];
+    }else{
+        //添加组
+        NSMutableArray *mArray = [NSMutableArray arrayWithArray:self.groups.names];
+        [mArray addObject:self.textField.text];
+        self.groups.names = mArray;
+        [self.groups write];
+        YJObject *element = [[YJObject alloc]initWithName:self.textField.text];
+        element.selected = true;
+        [element write];
+    }
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)viewDidLoad {
@@ -43,7 +57,6 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface YJFoods : NSObject
-@property (nonatomic,strong) NSArray *names;
-@property (nonatomic,strong) NSArray *imageNames;
--(void)read;
--(void)write;
+#import "YJObject.h"
+@interface YJFoods : YJObject
++(instancetype)read;
 @end

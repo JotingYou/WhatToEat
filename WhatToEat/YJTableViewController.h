@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class YJFoods;
 @interface YJTableViewController : UITableViewController
-@property (nonatomic,strong) YJFoods *foods;
+@property (assign,nonatomic) NSUInteger row;
 
 @end

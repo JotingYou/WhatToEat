@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "JNWSpringAnimation.h"
-#import "YJFoods.h"
+#import "YJGroups.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (nonatomic,assign) CGPoint startPoint;
@@ -21,11 +21,29 @@
 @property (nonatomic,assign) CGPoint finalPoint;
 @property (nonatomic,assign) CGPoint originalPoint;
 @property (weak, nonatomic) IBOutlet UIImageView *aim;
-@property (nonatomic,strong) YJFoods *foods;
-
+@property (strong,nonatomic) YJGroups *groups;
+@property (strong,nonatomic) NSArray *allElement;
 @end
 
 @implementation ViewController
+-(NSArray *)allElement{
+    if (!_allElement) {
+        NSMutableArray *arrayM = [NSMutableArray array];
+        for (YJObject *element in self.groups.elements) {
+            if (element.isSelected) {
+                [arrayM addObjectsFromArray:element.names];
+            }
+        }
+        _allElement = [NSArray arrayWithArray:arrayM];
+    }
+    return _allElement;
+}
+-(YJObject *)groups{
+    if (!_groups) {
+        _groups = [YJGroups read];
+    }
+    return _groups;
+}
 - (IBAction)refresh:(id)sender {
     self.goButton.center = self.originalPoint;
     self.goButton.alpha = 1;
@@ -33,14 +51,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _foods = [[YJFoods alloc]init];
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(goAction:)];
     [self.goButton addGestureRecognizer:panRecognizer];
     self.originalPoint = self.goButton.center;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.foods read];
+    self.groups = [self.groups init];
+    _allElement = nil;
     [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:1 alpha:0]] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[self imageWithColor:[UIColor colorWithWhite:1 alpha:0]]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
@@ -141,9 +160,15 @@
 }
 -(void)success{
  //   NSLog(@"success");
-    NSUInteger row = arc4random() % self.foods.names.count;
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"决定了" message:[NSString stringWithFormat:@"就吃%@",self.foods.names[row]] preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    
+    if (!self.allElement.count) {
+        return;
+    }
+    
+    NSUInteger row = arc4random() % self.allElement.count;
+
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Gotit", nil) message:[NSString stringWithFormat:@"%@ %@ %@!",NSLocalizedString(@"ItisHeader", nil),self.allElement[row],NSLocalizedString(@"ItisFooter", nil)] preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:NSLocalizedString(@"Sure", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
 //        [self refresh:nil];
     }];
     [alertVC addAction:sure];

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class YJObject;
 @interface YJEditTableViewController : UITableViewController
-
+@property (assign,nonatomic) NSUInteger type;
+@property (strong,nonatomic) YJObject *element;
 @end
