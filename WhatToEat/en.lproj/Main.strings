@@ -1,0 +1,17 @@
+
+/* Class = "UINavigationItem"; title = "扔出去"; ObjectID = "3kg-mA-ymt"; */
+"3kg-mA-ymt.title" = "Throw";
+
+/* Class = "UIButton"; normalTitle = "GO"; ObjectID = "9fi-wD-9iZ"; */
+"9fi-wD-9iZ.normalTitle" = "GO";
+
+/* Class = "UINavigationItem"; title = "选择清单"; ObjectID = "cgw-rp-iGM"; */
+"cgw-rp-iGM.title" = "List";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "kBc-jA-o42"; */
+"kBc-jA-o42.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "编辑"; ObjectID = "qVs-cF-39D"; */
+"qVs-cF-39D.title" = "Edit";
+/* Class = "UINavigationItem"; title = "类别"; ObjectID = "DJm-N2-msY"; */
+"DJm-N2-msY.title" = "Groups";

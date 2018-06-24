@@ -1,54 +1,29 @@
 //
-//  YJEditTableViewController.m
+//  YJGroupTableViewController.m
 //  WhatToEat
 //
-//  Created by 姚家庆 on 2017/8/1.
-//  Copyright © 2017年 Joting. All rights reserved.
+//  Created by Zhangguo Huang on 2017/12/23.
+//  Copyright © 2017年 明星科技. All rights reserved.
 //
 
+#import "YJGroupTableViewController.h"
 #import "YJEditTableViewController.h"
-#import "YJObject.h"
+#import "YJTableViewController.h"
 #import "YJGroups.h"
-@interface YJEditTableViewController ()<UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@interface YJGroupTableViewController ()
 @property (strong,nonatomic) YJGroups *groups;
 @end
 
-@implementation YJEditTableViewController
+@implementation YJGroupTableViewController
 -(YJGroups *)groups{
     if (!_groups) {
         _groups = [YJGroups read];
     }
     return _groups;
 }
-- (IBAction)save:(id)sender {
-    if (!self.textField.text.length) {
-        return;
-    }
-    
-    if (self.type == 0) {
-        //添加组内元素
-        NSMutableArray *mArray = [NSMutableArray arrayWithArray:_element.names];
-        [mArray addObject:self.textField.text];
-        _element.names = [NSArray arrayWithArray:mArray];
-        [_element write];
-    }else{
-        //添加组
-        NSMutableArray *mArray = [NSMutableArray arrayWithArray:self.groups.names];
-        [mArray addObject:self.textField.text];
-        self.groups.names = mArray;
-        [self.groups write];
-        YJObject *element = [[YJObject alloc]initWithName:self.textField.text];
-        element.selected = true;
-        [element write];
-    }
-
-    [self.navigationController popViewControllerAnimated:YES];
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textField.delegate = self;
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -57,6 +32,20 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.groups =  [self.groups init];
+    [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:0 alpha:1]] forBarMetrics:UIBarMetricsDefault];
+    [self.tableView reloadData];
+
+}
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [color setFill];
+    CGContextFillRect(context, rect);
+    UIImage *imgae = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imgae;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -71,42 +60,54 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.groups.names.count;
+}
 
-    return 1;
-}
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [self save:nil];
-    return YES;
-}
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"groupCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = self.groups.names[indexPath.row];
+    YJObject *element = self.groups.elements[indexPath.row];
+    if (element.isSelected) {
+        cell.detailTextLabel.text = NSLocalizedString(@"Selected", nil);
+    }else{
+        cell.detailTextLabel.text = nil;
+    }
     
-    return cell;
+    return cell;    
 }
-*/
 
-/*
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"toDetailSegue" sender:[NSNumber numberWithInteger:indexPath.row]];
+}
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        NSMutableArray *arrayM = [NSMutableArray arrayWithArray:self.groups.names];
+        [arrayM removeObjectAtIndex:indexPath.row];
+        self.groups.names = arrayM;
+        arrayM = [NSMutableArray arrayWithArray:self.groups.elements];
+        [arrayM removeObjectAtIndex:indexPath.row];
+        self.groups.elements = arrayM ;
+        [self.groups write];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -114,22 +115,32 @@
 }
 */
 
-/*
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
 
-/*
+
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    UIViewController *destinationVC = [segue destinationViewController];
+    if ([destinationVC isKindOfClass:YJEditTableViewController.class]) {
+        YJEditTableViewController *vc = [segue destinationViewController];
+        vc.type = 1;
+    }else if ([destinationVC isKindOfClass:[YJTableViewController class]]){
+        YJTableViewController *vc = [segue destinationViewController];
+        NSNumber *number = sender;
+        vc.row = number.integerValue;
+    }
+
 }
-*/
+
 
 @end
