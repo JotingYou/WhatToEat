@@ -23,6 +23,14 @@
 		3E0689A41F306C26003E1D65 /* YJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A31F306C26003E1D65 /* YJTableViewController.m */; };
 		3E0689AA1F306D3B003E1D65 /* YJFoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689A91F306D3B003E1D65 /* YJFoods.m */; };
 		3E0689AD1F3071EA003E1D65 /* YJEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */; };
+		5C20377524FE347500CBCDD7 /* YJResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C20377424FE347500CBCDD7 /* YJResultController.m */; };
+		5C20377C24FE38B000CBCDD7 /* YJResultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C20377B24FE38B000CBCDD7 /* YJResultManager.m */; };
+		5C4223FC2509F6D8008CDCC4 /* YJAward.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C4223FA2509F6D8008CDCC4 /* YJAward.xcdatamodeld */; };
+		5C4223FF2509FA81008CDCC4 /* People+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4223FE2509FA81008CDCC4 /* People+Method.swift */; };
+		5C4224022509FB23008CDCC4 /* YJAwardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4224012509FB23008CDCC4 /* YJAwardManager.swift */; };
+		5C4224042509FC6E008CDCC4 /* Group+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4224032509FC6E008CDCC4 /* Group+Method.swift */; };
+		5C4224062509FD66008CDCC4 /* Honoree+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4224052509FD66008CDCC4 /* Honoree+Method.swift */; };
+		5C4224082509FDD1008CDCC4 /* Record+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4224072509FDD1008CDCC4 /* Record+Method.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +86,17 @@
 		3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEditTableViewController.h; sourceTree = "<group>"; };
 		3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJEditTableViewController.m; sourceTree = "<group>"; };
 		56174966826336931C62D8FC /* libPods-WhatToEat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatToEat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C20377324FE347500CBCDD7 /* YJResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJResultController.h; sourceTree = "<group>"; };
+		5C20377424FE347500CBCDD7 /* YJResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJResultController.m; sourceTree = "<group>"; };
+		5C20377A24FE38B000CBCDD7 /* YJResultManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJResultManager.h; sourceTree = "<group>"; };
+		5C20377B24FE38B000CBCDD7 /* YJResultManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJResultManager.m; sourceTree = "<group>"; };
+		5C4223FB2509F6D8008CDCC4 /* YJAward.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YJAward.xcdatamodel; sourceTree = "<group>"; };
+		5C4223FD2509FA81008CDCC4 /* WhatToEat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhatToEat-Bridging-Header.h"; sourceTree = "<group>"; };
+		5C4223FE2509FA81008CDCC4 /* People+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "People+Method.swift"; sourceTree = "<group>"; };
+		5C4224012509FB23008CDCC4 /* YJAwardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJAwardManager.swift; sourceTree = "<group>"; };
+		5C4224032509FC6E008CDCC4 /* Group+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+Method.swift"; sourceTree = "<group>"; };
+		5C4224052509FD66008CDCC4 /* Honoree+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Honoree+Method.swift"; sourceTree = "<group>"; };
+		5C4224072509FDD1008CDCC4 /* Record+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+Method.swift"; sourceTree = "<group>"; };
 		CB5D570B1665CBFA111846EC /* Pods-WhatToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,10 +131,6 @@
 			children = (
 				057DC8A31FEE0B080017CA8C /* YJObject.h */,
 				057DC8A41FEE0B080017CA8C /* YJObject.m */,
-				054A392D1FEE195300978705 /* YJGroups.h */,
-				054A392E1FEE195300978705 /* YJGroups.m */,
-				3E0689A81F306D3B003E1D65 /* YJFoods.h */,
-				3E0689A91F306D3B003E1D65 /* YJFoods.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -124,13 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				3E0689731F301905003E1D65 /* ViewController.h */,
-				3E0689741F301905003E1D65 /* ViewController.m */,
-				054A39301FEE274F00978705 /* YJGroupTableViewController.h */,
-				054A39311FEE274F00978705 /* YJGroupTableViewController.m */,
-				3E0689A21F306C26003E1D65 /* YJTableViewController.h */,
-				3E0689A31F306C26003E1D65 /* YJTableViewController.m */,
-				3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */,
-				3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -160,14 +168,17 @@
 		3E06896C1F301905003E1D65 /* WhatToEat */ = {
 			isa = PBXGroup;
 			children = (
-				054A39341FEE276A00978705 /* Controllers */,
-				054A39331FEE275800978705 /* Models */,
+				5C20377624FE347A00CBCDD7 /* Main */,
+				5C20377724FE34CE00CBCDD7 /* Groups */,
+				5C20377824FE34D400CBCDD7 /* Lists */,
+				5C20377924FE351D00CBCDD7 /* Results */,
 				3E0689701F301905003E1D65 /* AppDelegate.h */,
 				3E0689711F301905003E1D65 /* AppDelegate.m */,
 				3E0689761F301905003E1D65 /* Main.storyboard */,
 				3E0689791F301905003E1D65 /* Assets.xcassets */,
 				3E06897B1F301905003E1D65 /* LaunchScreen.storyboard */,
 				3E06897E1F301905003E1D65 /* Info.plist */,
+				5C4223FD2509FA81008CDCC4 /* WhatToEat-Bridging-Header.h */,
 				3E06896D1F301905003E1D65 /* Supporting Files */,
 				054A393B1FEE37E300978705 /* Localizable.strings */,
 			);
@@ -200,6 +211,73 @@
 			path = WhatToEatUITests;
 			sourceTree = "<group>";
 		};
+		5C20377624FE347A00CBCDD7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3E0689741F301905003E1D65 /* ViewController.m */,
+				054A39341FEE276A00978705 /* Controllers */,
+				054A39331FEE275800978705 /* Models */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		5C20377724FE34CE00CBCDD7 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				054A39301FEE274F00978705 /* YJGroupTableViewController.h */,
+				054A39311FEE274F00978705 /* YJGroupTableViewController.m */,
+				054A392D1FEE195300978705 /* YJGroups.h */,
+				054A392E1FEE195300978705 /* YJGroups.m */,
+			);
+			name = Groups;
+			sourceTree = "<group>";
+		};
+		5C20377824FE34D400CBCDD7 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				3E0689A21F306C26003E1D65 /* YJTableViewController.h */,
+				3E0689A31F306C26003E1D65 /* YJTableViewController.m */,
+				3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */,
+				3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */,
+				3E0689A81F306D3B003E1D65 /* YJFoods.h */,
+				3E0689A91F306D3B003E1D65 /* YJFoods.m */,
+			);
+			name = Lists;
+			sourceTree = "<group>";
+		};
+		5C20377924FE351D00CBCDD7 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				5C20377324FE347500CBCDD7 /* YJResultController.h */,
+				5C20377424FE347500CBCDD7 /* YJResultController.m */,
+				5C20377A24FE38B000CBCDD7 /* YJResultManager.h */,
+				5C20377B24FE38B000CBCDD7 /* YJResultManager.m */,
+				5CDE78F62509D3D0009645D2 /* Model */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		5C4224002509FAB0008CDCC4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5C4224012509FB23008CDCC4 /* YJAwardManager.swift */,
+				5C4223FA2509F6D8008CDCC4 /* YJAward.xcdatamodeld */,
+				5C4224032509FC6E008CDCC4 /* Group+Method.swift */,
+				5C4223FE2509FA81008CDCC4 /* People+Method.swift */,
+				5C4224052509FD66008CDCC4 /* Honoree+Method.swift */,
+				5C4224072509FDD1008CDCC4 /* Record+Method.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		5CDE78F62509D3D0009645D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C4224002509FAB0008CDCC4 /* CoreData */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		BEA25DFA608BC9D76DEEF9B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,8 +306,6 @@
 				3E0689661F301905003E1D65 /* Sources */,
 				3E0689671F301905003E1D65 /* Frameworks */,
 				3E0689681F301905003E1D65 /* Resources */,
-				B99FB665E0EB729EE25298B7 /* [CP] Embed Pods Frameworks */,
-				483809BD2386356A97F704F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +364,7 @@
 					3E0689691F301905003E1D65 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = BFQM2YX9WF;
+						LastSwiftMigration = 1170;
 						ProvisioningStyle = Automatic;
 					};
 					3E0689821F301905003E1D65 = {
@@ -309,6 +386,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hans",
@@ -360,43 +438,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatToEat-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		483809BD2386356A97F704F6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B99FB665E0EB729EE25298B7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -406,15 +457,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C4224022509FB23008CDCC4 /* YJAwardManager.swift in Sources */,
 				054A392F1FEE195300978705 /* YJGroups.m in Sources */,
 				3E0689AD1F3071EA003E1D65 /* YJEditTableViewController.m in Sources */,
 				3E0689A41F306C26003E1D65 /* YJTableViewController.m in Sources */,
+				5C4224042509FC6E008CDCC4 /* Group+Method.swift in Sources */,
+				5C4223FF2509FA81008CDCC4 /* People+Method.swift in Sources */,
+				5C4223FC2509F6D8008CDCC4 /* YJAward.xcdatamodeld in Sources */,
+				5C20377C24FE38B000CBCDD7 /* YJResultManager.m in Sources */,
 				3E0689751F301905003E1D65 /* ViewController.m in Sources */,
 				057DC8A51FEE0B080017CA8C /* YJObject.m in Sources */,
 				3E0689AA1F306D3B003E1D65 /* YJFoods.m in Sources */,
+				5C4224062509FD66008CDCC4 /* Honoree+Method.swift in Sources */,
 				3E0689721F301905003E1D65 /* AppDelegate.m in Sources */,
+				5C20377524FE347500CBCDD7 /* YJResultController.m in Sources */,
 				3E06896F1F301905003E1D65 /* main.m in Sources */,
 				054A39321FEE274F00978705 /* YJGroupTableViewController.m in Sources */,
+				5C4224082509FDD1008CDCC4 /* Record+Method.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +586,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "WhatToEat/WhatToEat-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -570,6 +630,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "WhatToEat/WhatToEat-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -580,12 +641,17 @@
 			baseConfigurationReference = CB5D570B1665CBFA111846EC /* Pods-WhatToEat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BFQM2YX9WF;
 				INFOPLIST_FILE = WhatToEat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youjoting.WhatToEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhatToEat/WhatToEat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -594,18 +660,23 @@
 			baseConfigurationReference = 39DF8A39FBC24C19D4193BA6 /* Pods-WhatToEat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BFQM2YX9WF;
 				INFOPLIST_FILE = WhatToEat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youjoting.WhatToEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhatToEat/WhatToEat-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		3E06899B1F301905003E1D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = AEY5X5KBCK;
 				INFOPLIST_FILE = WhatToEatTests/Info.plist;
@@ -619,6 +690,7 @@
 		3E06899C1F301905003E1D65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = AEY5X5KBCK;
 				INFOPLIST_FILE = WhatToEatTests/Info.plist;
@@ -632,6 +704,7 @@
 		3E06899E1F301905003E1D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = AEY5X5KBCK;
 				INFOPLIST_FILE = WhatToEatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -644,6 +717,7 @@
 		3E06899F1F301905003E1D65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = AEY5X5KBCK;
 				INFOPLIST_FILE = WhatToEatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -693,6 +767,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C4223FA2509F6D8008CDCC4 /* YJAward.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C4223FB2509F6D8008CDCC4 /* YJAward.xcdatamodel */,
+			);
+			currentVersion = 5C4223FB2509F6D8008CDCC4 /* YJAward.xcdatamodel */;
+			path = YJAward.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3E0689621F301905003E1D65 /* Project object */;
 }

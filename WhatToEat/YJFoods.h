@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YJObject.h"
-@interface YJFoods : YJObject
-+(instancetype)read;
+@class Group;
+@interface YJFoods : NSObject
++(Group *)fruit;
 @end

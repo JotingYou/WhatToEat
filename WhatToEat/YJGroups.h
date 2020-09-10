@@ -7,8 +7,12 @@
 //
 
 #import "YJObject.h"
-
-@interface YJGroups : YJObject
-@property (strong,nonatomic) NSArray *elements;
-+(instancetype)read;
+#import <WhatToEat-Swift.h>
+@interface YJGroups : NSObject
+@property (strong,nonatomic) NSArray *groups;
++(instancetype)shared;
+-(void)addGroupWith:(NSString *)name and:(NSString *)info;
+-(void)group:(Group *) group addPersonWithName:(NSString *)name Info:(NSString *)info;
+-(void)deleteGroup:(Group *) group;
+-(void)deletePerson:(People *)p;
 @end

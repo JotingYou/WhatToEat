@@ -11,13 +11,13 @@
 #import "YJGroups.h"
 @interface YJEditTableViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (strong,nonatomic) YJGroups *groups;
+@property (weak,nonatomic) YJGroups *groups;
 @end
 
 @implementation YJEditTableViewController
 -(YJGroups *)groups{
     if (!_groups) {
-        _groups = [YJGroups read];
+        _groups = [YJGroups shared];
     }
     return _groups;
 }
@@ -28,19 +28,11 @@
     
     if (self.type == 0) {
         //添加组内元素
-        NSMutableArray *mArray = [NSMutableArray arrayWithArray:_element.names];
-        [mArray addObject:self.textField.text];
-        _element.names = [NSArray arrayWithArray:mArray];
-        [_element write];
+        [self.groups group:self.element addPersonWithName:self.textField.text Info:nil];
+
     }else{
         //添加组
-        NSMutableArray *mArray = [NSMutableArray arrayWithArray:self.groups.names];
-        [mArray addObject:self.textField.text];
-        self.groups.names = mArray;
-        [self.groups write];
-        YJObject *element = [[YJObject alloc]initWithName:self.textField.text];
-        element.selected = true;
-        [element write];
+        [self.groups addGroupWith:self.textField.text and:nil];
     }
 
     [self.navigationController popViewControllerAnimated:YES];

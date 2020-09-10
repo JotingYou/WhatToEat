@@ -9,27 +9,51 @@
 #import "YJGroups.h"
 #import "YJFoods.h"
 @implementation YJGroups
--(instancetype)initWithName:(NSString *)name{
-    if (self = [super initWithName:name]) {        
-        if (!self.names.count) {
-            self.names = @[@"food"];
-            _elements = @[[YJFoods read]];
-        }else{
-            NSMutableArray *arrayM = [NSMutableArray array];
-            for (NSString *name in self.names) {
-                YJObject *model = [YJObject readWithName:name];
-                [arrayM addObject:model];
-            }
-            _elements = [NSArray arrayWithArray:arrayM];
+-(instancetype)init{
+    if (self = [super init]) {
+        _groups = [[YJAwardManager shared] readGroups];
+        if (_groups.count == 0) {
+            _groups = @[[YJFoods fruit]];
         }
         
     }
     return self;
 }
--(instancetype)init{
-    return [self initWithName:@"groups"];;
+-(void)addGroupWith:(NSString *)name and:(NSString *)info{
+    Group *g = [[YJAwardManager shared] insertGroup:name :info :true];
+    
+    NSMutableArray *ma = [NSMutableArray arrayWithArray:self.groups];
+    [ma addObject:g];
+    self.groups = ma;
+    
+    [[YJAwardManager shared] save];
 }
-+(instancetype)read{
-    return [[self alloc]initWithName:@"groups"];
+-(void)group:(Group *)group addPersonWithName:(NSString *)name Info:(NSString *)info{
+    [[YJAwardManager shared] insertPeople:name :info :group];
+    [[YJAwardManager shared] save];
+}
++(instancetype)shared{
+    static YJGroups *g;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        g = [[self alloc] init];
+    });
+    return g;
+}
+-(void)deleteGroup:(Group *) group{
+    for (People *p in group.members.allObjects) {
+        [[YJAwardManager shared] deletePeople:p];
+    }
+    [[YJAwardManager shared] deleteGroup:group];
+    
+    NSMutableArray *ma = [NSMutableArray arrayWithArray:self.groups];
+    [ma removeObject:group];
+    self.groups = ma;
+    
+    [[YJAwardManager shared] save];
+}
+-(void)deletePerson:(People *)p{
+    [[YJAwardManager shared] deletePeople:p];
+    [[YJAwardManager shared] save];
 }
 @end

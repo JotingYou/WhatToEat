@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hf3-em-KDr">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hf3-em-KDr">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +12,7 @@
             <objects>
                 <navigationController id="Hf3-em-KDr" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Ofm-9w-hL6">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
@@ -49,7 +46,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="pQn-7p-vxa">
-                                <rect key="frame" x="37" y="94" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="74" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="RMA-qY-Qo3"/>
                                     <constraint firstAttribute="width" constant="300" id="U48-s1-TtZ"/>
@@ -76,11 +73,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="扔出去" id="3kg-mA-ymt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="6Ee-0b-QBl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="1Cr-6S-66T">
                             <connections>
-                                <segue destination="04i-eO-DmX" kind="show" id="7Yd-xd-Ubc"/>
+                                <action selector="initElements:" destination="BYZ-38-t0r" id="I5m-8r-Ymw"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="compose" id="6Ee-0b-QBl">
+                                <connections>
+                                    <segue destination="04i-eO-DmX" kind="show" id="7Yd-xd-Ubc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="bookmarks" id="HWZ-3B-eFL">
+                                <connections>
+                                    <action selector="goToResult:" destination="BYZ-38-t0r" id="euI-Uv-0ii"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="aim" destination="pQn-7p-vxa" id="E5O-W3-GhJ"/>
@@ -104,11 +113,11 @@
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VhS-Xj-dCl" id="eOt-wL-z4k">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kBc-jA-o42">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -149,7 +158,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" textLabel="WjW-Rd-Ca8" detailTextLabel="bnK-Qn-trf" style="IBUITableViewCellStyleValue1" id="aDH-FJ-GXc">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aDH-FJ-GXc" id="xGO-f1-fGB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -205,16 +214,15 @@
                             <tableViewSection id="L7A-Tr-HwV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="editCell" id="miW-9b-byQ">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="18" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="miW-9b-byQ" id="eUO-T5-ZEo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-Dp-J3e">
-                                                    <rect key="frame" x="-1" y="-1" width="377" height="45.5"/>
+                                                    <rect key="frame" x="-1" y="-1" width="377" height="46"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
@@ -254,12 +262,12 @@
             <point key="canvasLocation" x="1636" y="-140"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="t70-rZ-m1G"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="moon" width="512" height="512"/>
         <image name="space2" width="798" height="798"/>
         <image name="stone" width="128" height="128"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="t70-rZ-m1G"/>
-    </inferredMetricsTieBreakers>
 </document>

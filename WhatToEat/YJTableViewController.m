@@ -12,29 +12,29 @@
 #import "YJEditTableViewController.h"
 #import "YJFoods.h"
 @interface YJTableViewController ()
-@property (strong,nonatomic) YJGroups *groups;
+@property (weak,nonatomic) YJGroups *groups;
 @property (strong, nonatomic) UIBarButtonItem *playItem;
-@property (strong,nonatomic) YJObject *element;
+@property (strong,nonatomic) Group *element;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addItem;
 @end
 
 @implementation YJTableViewController
--(YJObject *)element{
+-(Group *)element{
     if (!_element) {
-        _element = self.groups.elements[self.row];
+        _element = self.groups.groups[self.row];
     }
     return _element;
 }
 -(YJGroups *)groups{
     if (!_groups) {
-        _groups = [YJGroups read];
+        _groups = [YJGroups shared];
     }
     return _groups;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (self.element.isSelected) {
+    if (self.element.selected) {
         self.playItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(playItemClicked:)];
     }else{
         self.playItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(playItemClicked:)];
@@ -48,9 +48,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.groups =  [self.groups init];
-
-    self.element = self.groups.elements[self.row];
+    self.element = self.groups.groups[self.row];
     [self.tableView reloadData];
 }
 - (void)didReceiveMemoryWarning {
@@ -58,12 +56,11 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)playItemClicked:(id)sender {
-    if (self.element.isSelected) {
+    if (self.element.selected) {
         self.element.selected = false;
     }else{
         self.element.selected = true;
     }
-    [self.element write];
     [self.navigationController popViewControllerAnimated:YES];
 
 }
@@ -77,13 +74,15 @@
     return self.element.name;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.element.names.count;
+    return self.element.members.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"foodCell" forIndexPath:indexPath];
-    cell.textLabel.text = self.element.names[indexPath.row];
+    NSArray *people = self.element.members.allObjects;
+    People *p = people[indexPath.row];
+    cell.textLabel.text = p.name;
     return cell;
 }
 
@@ -101,10 +100,9 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        NSMutableArray *mArray = [NSMutableArray arrayWithArray:self.element.names];
-        [mArray removeObjectAtIndex:indexPath.row];
-        self.element.names = mArray;
-        [self.element write];
+        NSArray *people = self.element.members.allObjects;
+        People *p = people[indexPath.row];
+        [self.groups deletePerson:p];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

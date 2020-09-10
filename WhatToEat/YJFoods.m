@@ -7,19 +7,18 @@
 //
 
 #import "YJFoods.h"
+#import <WhatToEat-Swift.h>
 @implementation YJFoods
--(instancetype)init{
-    if (self = [super initWithName:@"food"]) {
-        if (!self.names.count) {
-            self.names = @[@"🍕",@"🍫",@"🍚",@"🍜",@"🍔",@"🍣",@"🍲"];
-            self.selected = true;
-            [self write];
-        }
-    }
-    return self;
-}
-+(instancetype)read{
-    return [[self alloc]init];
++(Group *)fruit{
+    Group * g = [[YJAwardManager shared]insertGroup:@"fruit" :@"example" :true ];
+    [[YJAwardManager shared] insertPeople:@"🍕" :@"" :g ];
+    [[YJAwardManager shared] insertPeople:@"🍫" :@"" :g ];
+    [[YJAwardManager shared] insertPeople:@"🍚" :@"" :g ];
+    [[YJAwardManager shared] insertPeople:@"🍜" :@"" :g ];
+    [[YJAwardManager shared] insertPeople:@"🍔" :@"" :g ];
+    [[YJAwardManager shared] insertPeople:@"🍣" :@"" :g ];
+    [[YJAwardManager shared] insertPeople:@"🍲" :@"" :g ];
+    return g;
 }
 
 @end

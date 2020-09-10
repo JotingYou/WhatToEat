@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "JNWSpringAnimation.h"
 #import "YJGroups.h"
+#import "YJResultManager.h"
+#import <AudioToolbox/AudioToolbox.h>
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (nonatomic,assign) CGPoint startPoint;
@@ -21,32 +23,41 @@
 @property (nonatomic,assign) CGPoint finalPoint;
 @property (nonatomic,assign) CGPoint originalPoint;
 @property (weak, nonatomic) IBOutlet UIImageView *aim;
-@property (strong,nonatomic) YJGroups *groups;
-@property (strong,nonatomic) NSArray *allElement;
+@property (weak,nonatomic) YJGroups *groups;
+@property (strong,nonatomic) NSMutableArray *allElement;
 @end
 
 @implementation ViewController
--(NSArray *)allElement{
+-(NSMutableArray *)allElement{
     if (!_allElement) {
         NSMutableArray *arrayM = [NSMutableArray array];
-        for (YJObject *element in self.groups.elements) {
-            if (element.isSelected) {
-                [arrayM addObjectsFromArray:element.names];
+        for (Group *element in self.groups.groups) {
+            if (element.selected) {
+                [arrayM addObjectsFromArray:element.members.allObjects];
             }
         }
-        _allElement = [NSArray arrayWithArray:arrayM];
+        _allElement = arrayM;
     }
     return _allElement;
 }
--(YJObject *)groups{
+-(YJGroups *)groups{
     if (!_groups) {
-        _groups = [YJGroups read];
+        _groups = [YJGroups shared];
     }
     return _groups;
+}
+- (IBAction)goToResult:(id)sender {
+    [self showViewController:[YJResultManager shared].resultController sender:nil];
 }
 - (IBAction)refresh:(id)sender {
     self.goButton.center = self.originalPoint;
     self.goButton.alpha = 1;
+}
+-(void)initElements{
+    _allElement = nil;
+}
+- (IBAction)initElements:(id)sender {
+    [self initElements];
 }
 
 - (void)viewDidLoad {
@@ -58,8 +69,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.groups = [self.groups init];
-    _allElement = nil;
+    //[self initElements];
     [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:1 alpha:0]] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[self imageWithColor:[UIColor colorWithWhite:1 alpha:0]]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
@@ -81,6 +91,7 @@
         self.startPoint = CGPointMake(panRecognizer.view.center.x+translatedPoint.x, panRecognizer.view.center.y+translatedPoint.y);
 
         [panRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+        AudioServicesPlaySystemSound(1519);
     }
     if (panRecognizer.state == UIGestureRecognizerStateEnded) {
         self.endTime = [NSDate timeIntervalSinceReferenceDate];
@@ -135,6 +146,7 @@
         //隐藏
         //透明度变为0
         aniAlp.fromValue=@1;
+        aniAlp.byValue = @0.9;
         aniAlp.toValue=@0;
         //缩小
         aniScale.values=@[@1,@0];
@@ -164,15 +176,24 @@
     if (!self.allElement.count) {
         return;
     }
-    
     NSUInteger row = arc4random() % self.allElement.count;
+    People *object = self.allElement[row];
 
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Gotit", nil) message:[NSString stringWithFormat:@"%@ %@ %@!",NSLocalizedString(@"ItisHeader", nil),self.allElement[row],NSLocalizedString(@"ItisFooter", nil)] preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *sure = [UIAlertAction actionWithTitle:NSLocalizedString(@"Sure", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//        [self refresh:nil];
-    }];
-    [alertVC addAction:sure];
-    [self presentViewController:alertVC animated:YES completion:nil];
+    if([[YJResultManager shared]add:object]){
+        [self.allElement removeObject:object];
+        
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Gotit", nil) message:[NSString stringWithFormat:@"%@ %@ %@!",NSLocalizedString(@"ItisHeader", nil),object.name,NSLocalizedString(@"ItisFooter", nil)] preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *sure = [UIAlertAction actionWithTitle:NSLocalizedString(@"Sure", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        
+        [alertVC addAction:sure];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }else{
+        //show error
+    }
+
 }
 -(void)fail{
 //    [self performSelector:@selector(refresh:) withObject:nil afterDelay:5];

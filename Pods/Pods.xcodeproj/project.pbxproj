@@ -7,183 +7,375 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		642487854456D77DCF0D00306F17936D /* JNWSpringAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DD558542B6D585670DF483D1C9A557 /* JNWSpringAnimation-dummy.m */; };
-		71B32CFCAE7D87890C25C55E3B550245 /* JNWSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0725F1717D000BB6777A065847DB8DAD /* JNWSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		770893FBFD8B9064FFBDC97F04EE38DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
-		AE8847DC7D0B7EDED88E73BE623697BE /* NSValue+JNWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4715AC13A1673CD965A8C9B74B14A908 /* NSValue+JNWAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8C541C62B9D552EB74E0A6C23B085E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
-		CECFDB4ECBE883FB1EB74675E54143FE /* NSValue+JNWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20E9C50275B4EA3F70F80F439270C5 /* NSValue+JNWAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D4F3E4B681F50AA7FABCDC990442FFB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
-		EEB1120B50C76CF947958939FDC1F986 /* JNWSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A047E854B4470C0B7FF6A4C9EC2413 /* JNWSpringAnimation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F56FD98F650F526BEB70485DECCD3798 /* Pods-WhatToEat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B364466E8D58FA1ADD2C22D478814DE0 /* Pods-WhatToEat-dummy.m */; };
+		114651B5421B6B4CE108BE65C993FC5E /* JNWSpringAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DDC8F1961E7DCCCA546E0A075A575 /* JNWSpringAnimation-dummy.m */; };
+		13ACE38551F7B65801E2B49527D0BC03 /* DDXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 121E865222D2F104AF5DD9EC70DFC886 /* DDXMLDocument.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2254858B4A5E5DBFE9C4B36AF0C2A6D7 /* KissXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298A78B09E7E6BAAD7A43BB535439EF /* KissXML-dummy.m */; };
+		22C7FFCE1B2C2268C230824D3796923A /* NSValue+JNWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F7EBAFC3283F5E84FF86AE59AD4FD6 /* NSValue+JNWAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		28FBF6DEEE6EF5EE1669388D8031DA6C /* JNWSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B5B366D1DCC3B6AC4FCC30EF44F780 /* JNWSpringAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3616D3BE9A51D87F5B475ECEDE774E24 /* DDXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 096ADA2448CE210C05FDB4FA37C10448 /* DDXMLNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E4ED7AA09AE32287528650408DCF3B5 /* DDXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FD682FE15018887AFF02609BA382AE6C /* DDXMLElement.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4717985730FCA91A96A73C766ECE1693 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 529170563C6D21807323322F223FF675 /* DDXMLElement.m */; };
+		62A7E91D9769EBAF45F5B7569D8D6D83 /* KissXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 17449BB49B1E3EE190E172914DE4284E /* KissXML.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7BA6CD5B5D1C852BD83B6657103F27FB /* DDXMLPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 671F7AD21A7436FEB2756F61EBD17354 /* DDXMLPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7CC28B024C46E921147691AA33951C6F /* DDXMLElementAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24372BAAAFCCC08C89C86CB1711B2CB9 /* DDXMLElementAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		973EEA3AB901F02E4679100A541BDDE2 /* DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F603DB2664717C8410DD1CAF1B271A /* DDXML.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		97F6B4EB8EF0DB567DAD25091D6CD10A /* NSString+DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 95DD1AF151753171DE4093117F50A3EA /* NSString+DDXML.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9B593F63B161B080D39E8B18611FCE07 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CEDE6DA92DFAD40EC34510FE6447D /* NSString+DDXML.m */; };
+		ADA3F58C9B7F60EE68518BA05EDDDEB9 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3B92F6DF6DF54BECBD6F6D943E4094 /* DDXMLElementAdditions.m */; };
+		C2DA8A26D0A7E0775BBA17E6AB24217D /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D46011DF67DAF9F7E6023AD81164 /* DDXMLDocument.m */; };
+		C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF02179F0689C0D3454B877C1874D33 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C7FD66D3D320095B45AD9D39EF1B858B /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BC08F89FD6F76D481421ABFC3ACEC /* MBProgressHUD-dummy.m */; };
+		D6438BA4F863AE0A7891F212EE3C06D0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 45551C357FB18714F988FB6D1C538062 /* MBProgressHUD.m */; };
+		DDEEDCFA3735D1F96C2767C0839BD6C4 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394BF06A9567DFFC7CBC99A4E93C8FB /* DDXMLNode.m */; };
+		F02E8761443FAEA5FE528F50D6E6463E /* JNWSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC1EAFB397A7AE2BD20E906B31D5560 /* JNWSpringAnimation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9FF394575C77329A17E348DAB4C810F /* NSValue+JNWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 35A8CF78AC815382448A520ACDDDCEBD /* NSValue+JNWAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FE629DD141BDB925B01EFA5CA5037159 /* Pods-WhatToEat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE55F3607878ADFAA2057D4766DAD211 /* Pods-WhatToEat-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4FC4CEF6CF560790727FDE7CFD2D8A64 /* PBXContainerItemProxy */ = {
+		14B427BE35597111928D0A384C82457B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5E0B3F4C9393107FDB4F0CB19CC423FD;
+			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
+			remoteInfo = MBProgressHUD;
+		};
+		CD0813A658AF8CB30B2DAFD7A09181B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B331AA3F078B2D3E1547825DD014E1E;
 			remoteInfo = JNWSpringAnimation;
+		};
+		FFADE7F46337B5C9CF401AC6AE92FAFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E29B9B6C65A7F7B0A531D16330B38F1;
+			remoteInfo = KissXML;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05A047E854B4470C0B7FF6A4C9EC2413 /* JNWSpringAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JNWSpringAnimation.m; sourceTree = "<group>"; };
-		0725F1717D000BB6777A065847DB8DAD /* JNWSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JNWSpringAnimation.h; sourceTree = "<group>"; };
-		13E737A39F1101505974F37CEA6552CC /* JNWSpringAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JNWSpringAnimation-prefix.pch"; sourceTree = "<group>"; };
-		2F20E9C50275B4EA3F70F80F439270C5 /* NSValue+JNWAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSValue+JNWAdditions.m"; sourceTree = "<group>"; };
-		354D4F8274F55F1E1204C1423B57375A /* Pods-WhatToEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhatToEat.release.xcconfig"; sourceTree = "<group>"; };
-		41C2E7083043FFCC936B65699BC8548C /* JNWSpringAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JNWSpringAnimation.xcconfig; sourceTree = "<group>"; };
-		4715AC13A1673CD965A8C9B74B14A908 /* NSValue+JNWAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSValue+JNWAdditions.h"; sourceTree = "<group>"; };
-		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		65C4A60C412B07ED31617E5D87BB8E70 /* libJNWSpringAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJNWSpringAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DCA333EFB45A730D8BABC7A7BF96D1E /* libPods-WhatToEat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatToEat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1C5D8A8896DC16DF90D9417F34B36D2 /* Pods-WhatToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhatToEat.debug.xcconfig"; sourceTree = "<group>"; };
-		B2C674B289CF3527943CC95CBB4F70DA /* Pods-WhatToEat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhatToEat-acknowledgements.plist"; sourceTree = "<group>"; };
-		B364466E8D58FA1ADD2C22D478814DE0 /* Pods-WhatToEat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhatToEat-dummy.m"; sourceTree = "<group>"; };
-		C8DD558542B6D585670DF483D1C9A557 /* JNWSpringAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JNWSpringAnimation-dummy.m"; sourceTree = "<group>"; };
-		CE948A2477112DC095A9A54A0FFF3084 /* Pods-WhatToEat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WhatToEat-frameworks.sh"; sourceTree = "<group>"; };
-		D1441D47695CA831EFEE0B34F6F079A5 /* Pods-WhatToEat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhatToEat-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F0E96279B01EA91E8D34E5CDACE1335C /* Pods-WhatToEat-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WhatToEat-resources.sh"; sourceTree = "<group>"; };
-		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		071BC08F89FD6F76D481421ABFC3ACEC /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		096ADA2448CE210C05FDB4FA37C10448 /* DDXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLNode.h; path = KissXML/DDXMLNode.h; sourceTree = "<group>"; };
+		0B3B92F6DF6DF54BECBD6F6D943E4094 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLElementAdditions.m; path = KissXML/Additions/DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		0D9DDC8F1961E7DCCCA546E0A075A575 /* JNWSpringAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JNWSpringAnimation-dummy.m"; sourceTree = "<group>"; };
+		10F7EBAFC3283F5E84FF86AE59AD4FD6 /* NSValue+JNWAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSValue+JNWAdditions.m"; sourceTree = "<group>"; };
+		121E865222D2F104AF5DD9EC70DFC886 /* DDXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLDocument.h; path = KissXML/DDXMLDocument.h; sourceTree = "<group>"; };
+		1394BF06A9567DFFC7CBC99A4E93C8FB /* DDXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLNode.m; path = KissXML/DDXMLNode.m; sourceTree = "<group>"; };
+		17449BB49B1E3EE190E172914DE4284E /* KissXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KissXML.h; path = KissXML/KissXML.h; sourceTree = "<group>"; };
+		1847672409ED3CE08ECA5AEF5B3E2CE8 /* JNWSpringAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JNWSpringAnimation.release.xcconfig; sourceTree = "<group>"; };
+		24372BAAAFCCC08C89C86CB1711B2CB9 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLElementAdditions.h; path = KissXML/Additions/DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		287B8DCCC2CE1577BA336BFB9724344E /* MBProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		2AC2D46011DF67DAF9F7E6023AD81164 /* DDXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLDocument.m; path = KissXML/DDXMLDocument.m; sourceTree = "<group>"; };
+		348C74291C28F883650CF4F47C0708F3 /* libPods-WhatToEat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-WhatToEat.a"; path = "libPods-WhatToEat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A8CF78AC815382448A520ACDDDCEBD /* NSValue+JNWAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSValue+JNWAdditions.h"; sourceTree = "<group>"; };
+		45551C357FB18714F988FB6D1C538062 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		47E145BA702861D67F7EF7BD2F67FC6C /* libKissXML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKissXML.a; path = libKissXML.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B7080723B74B1F5AE2145C98C3AC253 /* Pods-WhatToEat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhatToEat-acknowledgements.markdown"; sourceTree = "<group>"; };
+		529170563C6D21807323322F223FF675 /* DDXMLElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLElement.m; path = KissXML/DDXMLElement.m; sourceTree = "<group>"; };
+		671F7AD21A7436FEB2756F61EBD17354 /* DDXMLPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLPrivate.h; path = KissXML/Private/DDXMLPrivate.h; sourceTree = "<group>"; };
+		7A40EA49DA09A714D2B641D252EB8B47 /* Pods-WhatToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhatToEat.debug.xcconfig"; sourceTree = "<group>"; };
+		8298A78B09E7E6BAAD7A43BB535439EF /* KissXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KissXML-dummy.m"; sourceTree = "<group>"; };
+		8A036854AC9493B7ADB7407FEA19E114 /* Pods-WhatToEat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhatToEat-acknowledgements.plist"; sourceTree = "<group>"; };
+		8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95DD1AF151753171DE4093117F50A3EA /* NSString+DDXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+DDXML.h"; path = "KissXML/Categories/NSString+DDXML.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1AE1A0A99CABE6152F89409121D6D77 /* JNWSpringAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JNWSpringAnimation.debug.xcconfig; sourceTree = "<group>"; };
+		A8DF9F83C3D474310715AE77C26D1865 /* JNWSpringAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JNWSpringAnimation-prefix.pch"; sourceTree = "<group>"; };
+		AE55F3607878ADFAA2057D4766DAD211 /* Pods-WhatToEat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhatToEat-dummy.m"; sourceTree = "<group>"; };
+		AFC1EAFB397A7AE2BD20E906B31D5560 /* JNWSpringAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JNWSpringAnimation.m; sourceTree = "<group>"; };
+		BCC870B4287F5368F9AF9D04D89CAE3C /* KissXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KissXML-prefix.pch"; sourceTree = "<group>"; };
+		BEF02179F0689C0D3454B877C1874D33 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C2B5B366D1DCC3B6AC4FCC30EF44F780 /* JNWSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JNWSpringAnimation.h; sourceTree = "<group>"; };
+		C6F603DB2664717C8410DD1CAF1B271A /* DDXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXML.h; path = KissXML/DDXML.h; sourceTree = "<group>"; };
+		D22CEDE6DA92DFAD40EC34510FE6447D /* NSString+DDXML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+DDXML.m"; path = "KissXML/Categories/NSString+DDXML.m"; sourceTree = "<group>"; };
+		DC628BE4AD0F4944B0C98F9EEEE46982 /* Pods-WhatToEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhatToEat.release.xcconfig"; sourceTree = "<group>"; };
+		E6A0D1336A3F61BFFC175E38D05714E3 /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		E9C75B0BAEACF42BD8976AB707B33AA4 /* KissXML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KissXML.debug.xcconfig; sourceTree = "<group>"; };
+		F00875E7E9159527C32379398713C29F /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		F57BC9C581DD7FCC86166117D6E5DCEA /* libJNWSpringAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJNWSpringAnimation.a; path = libJNWSpringAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD682FE15018887AFF02609BA382AE6C /* DDXMLElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLElement.h; path = KissXML/DDXMLElement.h; sourceTree = "<group>"; };
+		FE88F8756857ED1B8DD49D7FBB0A9404 /* KissXML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KissXML.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1190B956ADD47B3222AF46E5F45668D2 /* Frameworks */ = {
+		CD968C8F750E56D0288AF2B4AE9D3C2A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F3E4B681F50AA7FABCDC990442FFB7 /* Foundation.framework in Frameworks */,
-				C8C541C62B9D552EB74E0A6C23B085E2 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3047BBE389A75B1548FB3FF6FE38398 /* Frameworks */ = {
+		DCBC7FE987FB53FBB71A9E7155D9E871 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770893FBFD8B9064FFBDC97F04EE38DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD19C52C23F7FFE52FEB963ADDD7E37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85E2BA215BD8841BA6CBEC762879681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BCDBE40BF30C8F3CB5B648CF14C3F8B /* Pods */ = {
+		07674684CFE161ACD602F0C0ADFFE4DB /* JNWSpringAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				D02577376BF6CF2B09C31EBFA96B3B52 /* JNWSpringAnimation */,
+				C2B5B366D1DCC3B6AC4FCC30EF44F780 /* JNWSpringAnimation.h */,
+				AFC1EAFB397A7AE2BD20E906B31D5560 /* JNWSpringAnimation.m */,
+				35A8CF78AC815382448A520ACDDDCEBD /* NSValue+JNWAdditions.h */,
+				10F7EBAFC3283F5E84FF86AE59AD4FD6 /* NSValue+JNWAdditions.m */,
+				83E9B4776F3A56635EBE7C6106BF6397 /* Support Files */,
 			);
-			name = Pods;
+			name = JNWSpringAnimation;
+			path = JNWSpringAnimation;
 			sourceTree = "<group>";
 		};
-		2C5B65F6C79C3F45B4E74D3FFCC77271 /* Products */ = {
+		1B8D0FD083482A00231B5FBBE8EE8573 /* KissXML */ = {
 			isa = PBXGroup;
 			children = (
-				65C4A60C412B07ED31617E5D87BB8E70 /* libJNWSpringAnimation.a */,
-				9DCA333EFB45A730D8BABC7A7BF96D1E /* libPods-WhatToEat.a */,
+				5F186EBC58B0BBC40B1A64ACFA27BFDD /* Additions */,
+				48E40E9BD4172AB400A85540C3F721CF /* Core */,
+				BD916971D52096BA2B7250F88DDA5594 /* Support Files */,
+			);
+			name = KissXML;
+			path = KissXML;
+			sourceTree = "<group>";
+		};
+		3C4AD1498C017100C712D4E717F4BA71 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				071BC08F89FD6F76D481421ABFC3ACEC /* MBProgressHUD-dummy.m */,
+				F00875E7E9159527C32379398713C29F /* MBProgressHUD-prefix.pch */,
+				287B8DCCC2CE1577BA336BFB9724344E /* MBProgressHUD.debug.xcconfig */,
+				E6A0D1336A3F61BFFC175E38D05714E3 /* MBProgressHUD.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		48E40E9BD4172AB400A85540C3F721CF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C6F603DB2664717C8410DD1CAF1B271A /* DDXML.h */,
+				121E865222D2F104AF5DD9EC70DFC886 /* DDXMLDocument.h */,
+				2AC2D46011DF67DAF9F7E6023AD81164 /* DDXMLDocument.m */,
+				FD682FE15018887AFF02609BA382AE6C /* DDXMLElement.h */,
+				529170563C6D21807323322F223FF675 /* DDXMLElement.m */,
+				096ADA2448CE210C05FDB4FA37C10448 /* DDXMLNode.h */,
+				1394BF06A9567DFFC7CBC99A4E93C8FB /* DDXMLNode.m */,
+				671F7AD21A7436FEB2756F61EBD17354 /* DDXMLPrivate.h */,
+				17449BB49B1E3EE190E172914DE4284E /* KissXML.h */,
+				95DD1AF151753171DE4093117F50A3EA /* NSString+DDXML.h */,
+				D22CEDE6DA92DFAD40EC34510FE6447D /* NSString+DDXML.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		5269C8DECA259502CD8C969861EBBF4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F57BC9C581DD7FCC86166117D6E5DCEA /* libJNWSpringAnimation.a */,
+				47E145BA702861D67F7EF7BD2F67FC6C /* libKissXML.a */,
+				8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */,
+				348C74291C28F883650CF4F47C0708F3 /* libPods-WhatToEat.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		5F186EBC58B0BBC40B1A64ACFA27BFDD /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+				24372BAAAFCCC08C89C86CB1711B2CB9 /* DDXMLElementAdditions.h */,
+				0B3B92F6DF6DF54BECBD6F6D943E4094 /* DDXMLElementAdditions.m */,
 			);
-			name = Frameworks;
+			name = Additions;
 			sourceTree = "<group>";
 		};
-		4DE198339774E64ECB91D244ACBCCF01 /* Targets Support Files */ = {
+		6A663367BF97993234D1FBC8C3C81736 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BB8A5D40F29FADF88E34B03F0C8224AF /* Pods-WhatToEat */,
+				07674684CFE161ACD602F0C0ADFFE4DB /* JNWSpringAnimation */,
+				1B8D0FD083482A00231B5FBBE8EE8573 /* KissXML */,
+				AA0E3ACC266F04F90CBBD6BA0C27CB27 /* MBProgressHUD */,
 			);
-			name = "Targets Support Files";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		797340E33DD1910E0CE12F598C843AE3 /* Support Files */ = {
+		83E9B4776F3A56635EBE7C6106BF6397 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				41C2E7083043FFCC936B65699BC8548C /* JNWSpringAnimation.xcconfig */,
-				C8DD558542B6D585670DF483D1C9A557 /* JNWSpringAnimation-dummy.m */,
-				13E737A39F1101505974F37CEA6552CC /* JNWSpringAnimation-prefix.pch */,
+				0D9DDC8F1961E7DCCCA546E0A075A575 /* JNWSpringAnimation-dummy.m */,
+				A8DF9F83C3D474310715AE77C26D1865 /* JNWSpringAnimation-prefix.pch */,
+				A1AE1A0A99CABE6152F89409121D6D77 /* JNWSpringAnimation.debug.xcconfig */,
+				1847672409ED3CE08ECA5AEF5B3E2CE8 /* JNWSpringAnimation.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/JNWSpringAnimation";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		9D4D608569E4BB5628F9C13479DEBA9C /* Pods-WhatToEat */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				2BCDBE40BF30C8F3CB5B648CF14C3F8B /* Pods */,
-				2C5B65F6C79C3F45B4E74D3FFCC77271 /* Products */,
-				4DE198339774E64ECB91D244ACBCCF01 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
-				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		BB8A5D40F29FADF88E34B03F0C8224AF /* Pods-WhatToEat */ = {
-			isa = PBXGroup;
-			children = (
-				D1441D47695CA831EFEE0B34F6F079A5 /* Pods-WhatToEat-acknowledgements.markdown */,
-				B2C674B289CF3527943CC95CBB4F70DA /* Pods-WhatToEat-acknowledgements.plist */,
-				B364466E8D58FA1ADD2C22D478814DE0 /* Pods-WhatToEat-dummy.m */,
-				CE948A2477112DC095A9A54A0FFF3084 /* Pods-WhatToEat-frameworks.sh */,
-				F0E96279B01EA91E8D34E5CDACE1335C /* Pods-WhatToEat-resources.sh */,
-				B1C5D8A8896DC16DF90D9417F34B36D2 /* Pods-WhatToEat.debug.xcconfig */,
-				354D4F8274F55F1E1204C1423B57375A /* Pods-WhatToEat.release.xcconfig */,
+				4B7080723B74B1F5AE2145C98C3AC253 /* Pods-WhatToEat-acknowledgements.markdown */,
+				8A036854AC9493B7ADB7407FEA19E114 /* Pods-WhatToEat-acknowledgements.plist */,
+				AE55F3607878ADFAA2057D4766DAD211 /* Pods-WhatToEat-dummy.m */,
+				7A40EA49DA09A714D2B641D252EB8B47 /* Pods-WhatToEat.debug.xcconfig */,
+				DC628BE4AD0F4944B0C98F9EEEE46982 /* Pods-WhatToEat.release.xcconfig */,
 			);
 			name = "Pods-WhatToEat";
 			path = "Target Support Files/Pods-WhatToEat";
 			sourceTree = "<group>";
 		};
-		D02577376BF6CF2B09C31EBFA96B3B52 /* JNWSpringAnimation */ = {
+		A38EC272C6C697A422CFA9C44872DF62 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0725F1717D000BB6777A065847DB8DAD /* JNWSpringAnimation.h */,
-				05A047E854B4470C0B7FF6A4C9EC2413 /* JNWSpringAnimation.m */,
-				4715AC13A1673CD965A8C9B74B14A908 /* NSValue+JNWAdditions.h */,
-				2F20E9C50275B4EA3F70F80F439270C5 /* NSValue+JNWAdditions.m */,
-				797340E33DD1910E0CE12F598C843AE3 /* Support Files */,
+				9D4D608569E4BB5628F9C13479DEBA9C /* Pods-WhatToEat */,
 			);
-			path = JNWSpringAnimation;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AA0E3ACC266F04F90CBBD6BA0C27CB27 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BEF02179F0689C0D3454B877C1874D33 /* MBProgressHUD.h */,
+				45551C357FB18714F988FB6D1C538062 /* MBProgressHUD.m */,
+				3C4AD1498C017100C712D4E717F4BA71 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		BD916971D52096BA2B7250F88DDA5594 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8298A78B09E7E6BAAD7A43BB535439EF /* KissXML-dummy.m */,
+				BCC870B4287F5368F9AF9D04D89CAE3C /* KissXML-prefix.pch */,
+				E9C75B0BAEACF42BD8976AB707B33AA4 /* KissXML.debug.xcconfig */,
+				FE88F8756857ED1B8DD49D7FBB0A9404 /* KissXML.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KissXML";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				6A663367BF97993234D1FBC8C3C81736 /* Pods */,
+				5269C8DECA259502CD8C969861EBBF4B /* Products */,
+				A38EC272C6C697A422CFA9C44872DF62 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DBBD58304F0342C7B302DD1DD64F7031 /* Headers */ = {
+		638B931DBA8271BD1161679F26A68505 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B32CFCAE7D87890C25C55E3B550245 /* JNWSpringAnimation.h in Headers */,
-				AE8847DC7D0B7EDED88E73BE623697BE /* NSValue+JNWAdditions.h in Headers */,
+				973EEA3AB901F02E4679100A541BDDE2 /* DDXML.h in Headers */,
+				13ACE38551F7B65801E2B49527D0BC03 /* DDXMLDocument.h in Headers */,
+				3E4ED7AA09AE32287528650408DCF3B5 /* DDXMLElement.h in Headers */,
+				7CC28B024C46E921147691AA33951C6F /* DDXMLElementAdditions.h in Headers */,
+				3616D3BE9A51D87F5B475ECEDE774E24 /* DDXMLNode.h in Headers */,
+				7BA6CD5B5D1C852BD83B6657103F27FB /* DDXMLPrivate.h in Headers */,
+				62A7E91D9769EBAF45F5B7569D8D6D83 /* KissXML.h in Headers */,
+				97F6B4EB8EF0DB567DAD25091D6CD10A /* NSString+DDXML.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B697CED04DA41BA786DB7E6E93C1696 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FBF6DEEE6EF5EE1669388D8031DA6C /* JNWSpringAnimation.h in Headers */,
+				F9FF394575C77329A17E348DAB4C810F /* NSValue+JNWAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DAA31F1082196227B62F4F698E48E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F69A1D7D9933B5C2BFB41B06C24EC219 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5E0B3F4C9393107FDB4F0CB19CC423FD /* JNWSpringAnimation */ = {
+		5E29B9B6C65A7F7B0A531D16330B38F1 /* KissXML */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B24BCF88081B0595A4C681100C437ABF /* Build configuration list for PBXNativeTarget "JNWSpringAnimation" */;
+			buildConfigurationList = 87A77F3ED8FD52AFBA54D0FF25B1B0D9 /* Build configuration list for PBXNativeTarget "KissXML" */;
 			buildPhases = (
-				790177EA6E272E13C3C489B9FA2DB44C /* Sources */,
-				1190B956ADD47B3222AF46E5F45668D2 /* Frameworks */,
-				DBBD58304F0342C7B302DD1DD64F7031 /* Headers */,
+				638B931DBA8271BD1161679F26A68505 /* Headers */,
+				D7995A41D99291150F921CCC88F0AE0E /* Sources */,
+				CD968C8F750E56D0288AF2B4AE9D3C2A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KissXML;
+			productName = KissXML;
+			productReference = 47E145BA702861D67F7EF7BD2F67FC6C /* libKissXML.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				F69A1D7D9933B5C2BFB41B06C24EC219 /* Headers */,
+				12490B6EBA14F6030F9CBD9575807097 /* Sources */,
+				DCBC7FE987FB53FBB71A9E7155D9E871 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = 8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9B331AA3F078B2D3E1547825DD014E1E /* JNWSpringAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90419642C0EC75209D883D1BE9BF6B2A /* Build configuration list for PBXNativeTarget "JNWSpringAnimation" */;
+			buildPhases = (
+				6B697CED04DA41BA786DB7E6E93C1696 /* Headers */,
+				AE4AC312A9BD8ED7BA65E06B88A4DFC4 /* Sources */,
+				F85E2BA215BD8841BA6CBEC762879681 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,140 +383,294 @@
 			);
 			name = JNWSpringAnimation;
 			productName = JNWSpringAnimation;
-			productReference = 65C4A60C412B07ED31617E5D87BB8E70 /* libJNWSpringAnimation.a */;
+			productReference = F57BC9C581DD7FCC86166117D6E5DCEA /* libJNWSpringAnimation.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		5F9BDE3631E005D72C1667C1D498A4D6 /* Pods-WhatToEat */ = {
+		E66377F8773FDDF0EE325FCB1C8B56CF /* Pods-WhatToEat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99329317E86EACFE37247918A1424DA7 /* Build configuration list for PBXNativeTarget "Pods-WhatToEat" */;
+			buildConfigurationList = F45904EB299DDA76C34153B4DA0E62CE /* Build configuration list for PBXNativeTarget "Pods-WhatToEat" */;
 			buildPhases = (
-				874E0A5C4091A0E79DAB85948A10784D /* Sources */,
-				F3047BBE389A75B1548FB3FF6FE38398 /* Frameworks */,
+				E1DAA31F1082196227B62F4F698E48E2 /* Headers */,
+				35D465F1D0216DCAA226DBE6C5AAB692 /* Sources */,
+				EFD19C52C23F7FFE52FEB963ADDD7E37 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D4FB597AA696A524A19B03CB866DE6D7 /* PBXTargetDependency */,
+				2ACF2191161F48AA41E673DE10835561 /* PBXTargetDependency */,
+				D6A95055041F9BF62FD0F0077067B539 /* PBXTargetDependency */,
+				9FB060E2FE0A767186EE0C0F2706D370 /* PBXTargetDependency */,
 			);
 			name = "Pods-WhatToEat";
 			productName = "Pods-WhatToEat";
-			productReference = 9DCA333EFB45A730D8BABC7A7BF96D1E /* libPods-WhatToEat.a */;
+			productReference = 348C74291C28F883650CF4F47C0708F3 /* libPods-WhatToEat.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0910;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2C5B65F6C79C3F45B4E74D3FFCC77271 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5269C8DECA259502CD8C969861EBBF4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E0B3F4C9393107FDB4F0CB19CC423FD /* JNWSpringAnimation */,
-				5F9BDE3631E005D72C1667C1D498A4D6 /* Pods-WhatToEat */,
+				9B331AA3F078B2D3E1547825DD014E1E /* JNWSpringAnimation */,
+				5E29B9B6C65A7F7B0A531D16330B38F1 /* KissXML */,
+				82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */,
+				E66377F8773FDDF0EE325FCB1C8B56CF /* Pods-WhatToEat */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		790177EA6E272E13C3C489B9FA2DB44C /* Sources */ = {
+		12490B6EBA14F6030F9CBD9575807097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				642487854456D77DCF0D00306F17936D /* JNWSpringAnimation-dummy.m in Sources */,
-				EEB1120B50C76CF947958939FDC1F986 /* JNWSpringAnimation.m in Sources */,
-				CECFDB4ECBE883FB1EB74675E54143FE /* NSValue+JNWAdditions.m in Sources */,
+				C7FD66D3D320095B45AD9D39EF1B858B /* MBProgressHUD-dummy.m in Sources */,
+				D6438BA4F863AE0A7891F212EE3C06D0 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		874E0A5C4091A0E79DAB85948A10784D /* Sources */ = {
+		35D465F1D0216DCAA226DBE6C5AAB692 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F56FD98F650F526BEB70485DECCD3798 /* Pods-WhatToEat-dummy.m in Sources */,
+				FE629DD141BDB925B01EFA5CA5037159 /* Pods-WhatToEat-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE4AC312A9BD8ED7BA65E06B88A4DFC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114651B5421B6B4CE108BE65C993FC5E /* JNWSpringAnimation-dummy.m in Sources */,
+				F02E8761443FAEA5FE528F50D6E6463E /* JNWSpringAnimation.m in Sources */,
+				22C7FFCE1B2C2268C230824D3796923A /* NSValue+JNWAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7995A41D99291150F921CCC88F0AE0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2DA8A26D0A7E0775BBA17E6AB24217D /* DDXMLDocument.m in Sources */,
+				4717985730FCA91A96A73C766ECE1693 /* DDXMLElement.m in Sources */,
+				ADA3F58C9B7F60EE68518BA05EDDDEB9 /* DDXMLElementAdditions.m in Sources */,
+				DDEEDCFA3735D1F96C2767C0839BD6C4 /* DDXMLNode.m in Sources */,
+				2254858B4A5E5DBFE9C4B36AF0C2A6D7 /* KissXML-dummy.m in Sources */,
+				9B593F63B161B080D39E8B18611FCE07 /* NSString+DDXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D4FB597AA696A524A19B03CB866DE6D7 /* PBXTargetDependency */ = {
+		2ACF2191161F48AA41E673DE10835561 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JNWSpringAnimation;
-			target = 5E0B3F4C9393107FDB4F0CB19CC423FD /* JNWSpringAnimation */;
-			targetProxy = 4FC4CEF6CF560790727FDE7CFD2D8A64 /* PBXContainerItemProxy */;
+			target = 9B331AA3F078B2D3E1547825DD014E1E /* JNWSpringAnimation */;
+			targetProxy = CD0813A658AF8CB30B2DAFD7A09181B7 /* PBXContainerItemProxy */;
+		};
+		9FB060E2FE0A767186EE0C0F2706D370 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
+			targetProxy = 14B427BE35597111928D0A384C82457B /* PBXContainerItemProxy */;
+		};
+		D6A95055041F9BF62FD0F0077067B539 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KissXML;
+			target = 5E29B9B6C65A7F7B0A531D16330B38F1 /* KissXML */;
+			targetProxy = FFADE7F46337B5C9CF401AC6AE92FAFA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5E0A1713B869882B9C8A2884AC395AF4 /* Debug */ = {
+		0C8033609421B8522D89050AB6716743 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C5D8A8896DC16DF90D9417F34B36D2 /* Pods-WhatToEat.debug.xcconfig */;
+			baseConfigurationReference = E6A0D1336A3F61BFFC175E38D05714E3 /* MBProgressHUD.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		110F69768B51A32FCF8FB258C2035420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 287B8DCCC2CE1577BA336BFB9724344E /* MBProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		643C76AA582046977B7877822ED7A258 /* Debug */ = {
+		6ACE01E101CD05C2D9274B28BE586706 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		710E4C21E172CD6E35F95D7A20324A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE88F8756857ED1B8DD49D7FBB0A9404 /* KissXML.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KissXML/KissXML-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KissXML;
+				PRODUCT_NAME = KissXML;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1B259C5FB7465EF9C71163827046E70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -333,173 +679,189 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		ABC2EF806687849BA3D731332793D05F /* Release */ = {
+		BFAB458FBABA326F55A0A01DAF0B80B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 354D4F8274F55F1E1204C1423B57375A /* Pods-WhatToEat.release.xcconfig */;
+			baseConfigurationReference = DC628BE4AD0F4944B0C98F9EEEE46982 /* Pods-WhatToEat.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		C03B8870130C98D1B02B59D003687524 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		EC32066E091648FE3E1EE102E58B2FF0 /* Release */ = {
+		C5B77F01189593636B4575A3A113B26C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41C2E7083043FFCC936B65699BC8548C /* JNWSpringAnimation.xcconfig */;
+			baseConfigurationReference = 1847672409ED3CE08ECA5AEF5B3E2CE8 /* JNWSpringAnimation.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/JNWSpringAnimation/JNWSpringAnimation-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = JNWSpringAnimation;
+				PRODUCT_NAME = JNWSpringAnimation;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		ECA1E57ED99EC50A74A0BCEE2B97BCBC /* Debug */ = {
+		E332AE94173A3B848A2DBA31EAD51C1E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41C2E7083043FFCC936B65699BC8548C /* JNWSpringAnimation.xcconfig */;
+			baseConfigurationReference = A1AE1A0A99CABE6152F89409121D6D77 /* JNWSpringAnimation.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/JNWSpringAnimation/JNWSpringAnimation-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = JNWSpringAnimation;
+				PRODUCT_NAME = JNWSpringAnimation;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F04EAA186314EC109BDD6F6372C1517D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A40EA49DA09A714D2B641D252EB8B47 /* Pods-WhatToEat.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCF84D8A023291120783DFC8AE3C4D03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9C75B0BAEACF42BD8976AB707B33AA4 /* KissXML.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KissXML/KissXML-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KissXML;
+				PRODUCT_NAME = KissXML;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				643C76AA582046977B7877822ED7A258 /* Debug */,
-				C03B8870130C98D1B02B59D003687524 /* Release */,
+				110F69768B51A32FCF8FB258C2035420 /* Debug */,
+				0C8033609421B8522D89050AB6716743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99329317E86EACFE37247918A1424DA7 /* Build configuration list for PBXNativeTarget "Pods-WhatToEat" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E0A1713B869882B9C8A2884AC395AF4 /* Debug */,
-				ABC2EF806687849BA3D731332793D05F /* Release */,
+				B1B259C5FB7465EF9C71163827046E70 /* Debug */,
+				6ACE01E101CD05C2D9274B28BE586706 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B24BCF88081B0595A4C681100C437ABF /* Build configuration list for PBXNativeTarget "JNWSpringAnimation" */ = {
+		87A77F3ED8FD52AFBA54D0FF25B1B0D9 /* Build configuration list for PBXNativeTarget "KissXML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ECA1E57ED99EC50A74A0BCEE2B97BCBC /* Debug */,
-				EC32066E091648FE3E1EE102E58B2FF0 /* Release */,
+				FCF84D8A023291120783DFC8AE3C4D03 /* Debug */,
+				710E4C21E172CD6E35F95D7A20324A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90419642C0EC75209D883D1BE9BF6B2A /* Build configuration list for PBXNativeTarget "JNWSpringAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E332AE94173A3B848A2DBA31EAD51C1E /* Debug */,
+				C5B77F01189593636B4575A3A113B26C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F45904EB299DDA76C34153B4DA0E62CE /* Build configuration list for PBXNativeTarget "Pods-WhatToEat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04EAA186314EC109BDD6F6372C1517D /* Debug */,
+				BFAB458FBABA326F55A0A01DAF0B80B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

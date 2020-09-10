@@ -11,13 +11,13 @@
 #import "YJTableViewController.h"
 #import "YJGroups.h"
 @interface YJGroupTableViewController ()
-@property (strong,nonatomic) YJGroups *groups;
+@property (weak,nonatomic) YJGroups *groups;
 @end
 
 @implementation YJGroupTableViewController
 -(YJGroups *)groups{
     if (!_groups) {
-        _groups = [YJGroups read];
+        _groups = [YJGroups shared];
     }
     return _groups;
 }
@@ -32,7 +32,6 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.groups =  [self.groups init];
     [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:0 alpha:1]] forBarMetrics:UIBarMetricsDefault];
     [self.tableView reloadData];
 
@@ -60,16 +59,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.groups.names.count;
+    return self.groups.groups.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"groupCell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = self.groups.names[indexPath.row];
-    YJObject *element = self.groups.elements[indexPath.row];
-    if (element.isSelected) {
+    Group *element = self.groups.groups[indexPath.row];
+    cell.textLabel.text = element.name;
+    if (element.selected) {
         cell.detailTextLabel.text = NSLocalizedString(@"Selected", nil);
     }else{
         cell.detailTextLabel.text = nil;
@@ -94,13 +92,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        NSMutableArray *arrayM = [NSMutableArray arrayWithArray:self.groups.names];
-        [arrayM removeObjectAtIndex:indexPath.row];
-        self.groups.names = arrayM;
-        arrayM = [NSMutableArray arrayWithArray:self.groups.elements];
-        [arrayM removeObjectAtIndex:indexPath.row];
-        self.groups.elements = arrayM ;
-        [self.groups write];
+        Group *g = self.groups.groups[indexPath.row];
+        [self.groups deleteGroup:g];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {

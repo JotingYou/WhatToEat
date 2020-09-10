@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Group" representedClassName="Group" syncable="YES" codeGenerationType="class">
+        <attribute name="info" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="People" inverseName="group" inverseEntity="People"/>
+    </entity>
+    <entity name="Honoree" representedClassName="Honoree" syncable="YES" codeGenerationType="class">
+        <attribute name="degree" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="person" maxCount="1" deletionRule="Nullify" destinationEntity="People"/>
+        <relationship name="record" maxCount="1" deletionRule="Nullify" destinationEntity="Record" inverseName="honorees" inverseEntity="Record"/>
+    </entity>
+    <entity name="People" representedClassName="People" syncable="YES" codeGenerationType="class">
+        <attribute name="info" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="group" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="members" inverseEntity="Group"/>
+    </entity>
+    <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
+        <relationship name="honorees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Honoree" inverseName="record" inverseEntity="Honoree"/>
+    </entity>
+    <elements>
+        <element name="Record" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="Honoree" positionX="-36" positionY="9" width="128" height="88"/>
+        <element name="People" positionX="-9" positionY="72" width="128" height="88"/>
+        <element name="Group" positionX="9" positionY="90" width="128" height="103"/>
+    </elements>
+</model>
