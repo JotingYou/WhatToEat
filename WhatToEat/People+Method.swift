@@ -24,16 +24,18 @@ extension People {
         }
         return Array<People>()
     }
-    static func insert(_ name:String,_ info:String?,_ group:Group)->People{
+    static func insert(_ name:String,_ info:String?,_ tel:String?,_ group:Group)->People{
         let entity = NSEntityDescription.entity(forEntityName: "People", in: YJAwardManager.shared.managedObjectContext)!
         let person = People.init(entity: entity, insertInto: YJAwardManager.shared.managedObjectContext)
-        person.setValues(name,info,group)
+        person.setValues(name,info,tel,group)
+        person.create_date = Date()
         return person
 
     }
-    func setValues(_ name:String,_ info:String?,_ group:Group) {
+    func setValues(_ name:String,_ info:String?,_ tel:String?,_ group:Group) {
         self.name = name
         self.info = info
-        self.group = group;
+        self.group = group
+        self.tel = tel
     }
 }

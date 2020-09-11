@@ -31,7 +31,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleInsetGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"elementCell"];
@@ -99,6 +99,7 @@
     }
     People *ele = [self groupsWithSection:indexPath.section][indexPath.row];
     cell.textLabel.text = ele.name;
+    cell.detailTextLabel.text = ele.info;
     return cell;
 }
 

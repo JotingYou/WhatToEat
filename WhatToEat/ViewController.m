@@ -11,6 +11,7 @@
 #import "YJGroups.h"
 #import "YJResultManager.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "YJProgressHUD.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (nonatomic,assign) CGPoint startPoint;
@@ -58,6 +59,7 @@
 }
 - (IBAction)initElements:(id)sender {
     [self initElements];
+    [YJProgressHUD showSuccess:@"重置成功"];
 }
 
 - (void)viewDidLoad {
@@ -174,6 +176,7 @@
  //   NSLog(@"success");
     
     if (!self.allElement.count) {
+        [YJProgressHUD showWarning:@"所有人都已经中奖了，不要再扔了！"];
         return;
     }
     NSUInteger row = arc4random() % self.allElement.count;
@@ -192,11 +195,12 @@
         [self presentViewController:alertVC animated:YES completion:nil];
     }else{
         //show error
+        [YJProgressHUD showError:@"获奖人数已满，不能再抽奖咯"];
     }
 
 }
 -(void)fail{
-//    [self performSelector:@selector(refresh:) withObject:nil afterDelay:5];
+    [YJProgressHUD showError:@"没有砸中哦"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

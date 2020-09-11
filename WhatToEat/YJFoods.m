@@ -9,15 +9,15 @@
 #import "YJFoods.h"
 #import <WhatToEat-Swift.h>
 @implementation YJFoods
-+(Group *)fruit{
-    Group * g = [[YJAwardManager shared]insertGroup:@"fruit" :@"example" :true ];
-    [[YJAwardManager shared] insertPeople:@"🍕" :@"" :g ];
-    [[YJAwardManager shared] insertPeople:@"🍫" :@"" :g ];
-    [[YJAwardManager shared] insertPeople:@"🍚" :@"" :g ];
-    [[YJAwardManager shared] insertPeople:@"🍜" :@"" :g ];
-    [[YJAwardManager shared] insertPeople:@"🍔" :@"" :g ];
-    [[YJAwardManager shared] insertPeople:@"🍣" :@"" :g ];
-    [[YJAwardManager shared] insertPeople:@"🍲" :@"" :g ];
++(Group *)food{
+    Group * g = [[YJAwardManager shared]insertGroup:@"food" :@"example" :true ];
+    [[YJAwardManager shared] insertPeople:@"🍕" :@"" :@"":g ];
+    [[YJAwardManager shared] insertPeople:@"🍫" :@"" :@"":g ];
+    [[YJAwardManager shared] insertPeople:@"🍚" :@"" :@"":g ];
+    [[YJAwardManager shared] insertPeople:@"🍜" :@"" :@"":g ];
+    [[YJAwardManager shared] insertPeople:@"🍔" :@"" :@"":g ];
+    [[YJAwardManager shared] insertPeople:@"🍣" :@"" :@"":g ];
+    [[YJAwardManager shared] insertPeople:@"🍲" :@"" :@"":g ];
     return g;
 }
 

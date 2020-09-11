@@ -9,7 +9,14 @@
 #import "YJResultManager.h"
 #import "YJGroups.h"
 #import "YJResultController.h"
+#import <WhatToEat-Swift.h>
+@interface YJResultManager()
+@property (weak,nonatomic) YJAwardManager *awardManager;
+@end
 @implementation YJResultManager
+-(YJAwardManager *)awardManager{
+    return [YJAwardManager shared];
+}
 -(instancetype)init{
     if (self = [super init]) {
         _firstNumber = 1;
@@ -84,6 +91,16 @@
     return false;
 }
 -(void)saveResult{
-
+    Record *r = [self.awardManager insertRecord];
+    for (People *p in self.third) {
+        [self.awardManager insertHonoree:3 :p :r];
+    }
+    for (People *p in self.second) {
+        [self.awardManager insertHonoree:2 :p :r];
+    }
+    for (People *p in self.first) {
+        [self.awardManager insertHonoree:1 :p :r];
+    }
+    [self.awardManager save];
 }
 @end

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 @class Group;
 @interface YJFoods : NSObject
-+(Group *)fruit;
++(Group *)food;
 @end

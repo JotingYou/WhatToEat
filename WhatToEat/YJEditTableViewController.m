@@ -10,7 +10,9 @@
 #import "YJObject.h"
 #import "YJGroups.h"
 @interface YJEditTableViewController ()<UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *infoField;
+@property (weak, nonatomic) IBOutlet UITextField *telField;
 @property (weak,nonatomic) YJGroups *groups;
 @end
 
@@ -22,24 +24,25 @@
     return _groups;
 }
 - (IBAction)save:(id)sender {
-    if (!self.textField.text.length) {
+    if (!self.nameField.text.length) {
         return;
     }
     
     if (self.type == 0) {
         //添加组内元素
-        [self.groups group:self.element addPersonWithName:self.textField.text Info:nil];
+        [self.groups group:self.element addPersonWithName:self.nameField.text Info:self.infoField.text Tel:self.telField.text];
 
     }else{
         //添加组
-        [self.groups addGroupWith:self.textField.text and:nil];
+        [self.groups addGroupWith:self.nameField.text and:nil];
     }
 
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textField.delegate = self;
+    self.nameField.delegate = self;
+    self.telField.delegate = self;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -58,7 +61,9 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    if (self.type == 0) {
+        return 3;
+    }
     return 1;
 }
 
@@ -70,15 +75,13 @@
     [self save:nil];
     return YES;
 }
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"editCell" forIndexPath:indexPath];
+//
+//    return cell;
+//}
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -12,7 +12,8 @@
 @property (strong,nonatomic) NSArray *groups;
 +(instancetype)shared;
 -(void)addGroupWith:(NSString *)name and:(NSString *)info;
--(void)group:(Group *) group addPersonWithName:(NSString *)name Info:(NSString *)info;
+-(void)group:(Group *) group addPersonWithName:(NSString *)name Info:(NSString *)info Tel:(NSString *)tel;
 -(void)deleteGroup:(Group *) group;
 -(void)deletePerson:(People *)p;
+-(void)save;
 @end

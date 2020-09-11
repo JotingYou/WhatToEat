@@ -31,6 +31,10 @@
 		5C4224042509FC6E008CDCC4 /* Group+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4224032509FC6E008CDCC4 /* Group+Method.swift */; };
 		5C4224062509FD66008CDCC4 /* Honoree+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4224052509FD66008CDCC4 /* Honoree+Method.swift */; };
 		5C4224082509FDD1008CDCC4 /* Record+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4224072509FDD1008CDCC4 /* Record+Method.swift */; };
+		5C42240B250B0DA5008CDCC4 /* YJImportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C42240A250B0DA5008CDCC4 /* YJImportController.swift */; };
+		5C422414250B1588008CDCC4 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C422413250B1588008CDCC4 /* MBProgressHUD.bundle */; };
+		5C422419250B1680008CDCC4 /* YJProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C422418250B1680008CDCC4 /* YJProgressHUD.m */; };
+		5C42241F250B661E008CDCC4 /* YJFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C42241E250B661E008CDCC4 /* YJFoodCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,12 @@
 		5C4224032509FC6E008CDCC4 /* Group+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+Method.swift"; sourceTree = "<group>"; };
 		5C4224052509FD66008CDCC4 /* Honoree+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Honoree+Method.swift"; sourceTree = "<group>"; };
 		5C4224072509FDD1008CDCC4 /* Record+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+Method.swift"; sourceTree = "<group>"; };
+		5C42240A250B0DA5008CDCC4 /* YJImportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJImportController.swift; sourceTree = "<group>"; };
+		5C422413250B1588008CDCC4 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		5C422417250B1680008CDCC4 /* YJProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJProgressHUD.h; sourceTree = "<group>"; };
+		5C422418250B1680008CDCC4 /* YJProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJProgressHUD.m; sourceTree = "<group>"; };
+		5C42241D250B661E008CDCC4 /* YJFoodCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJFoodCell.h; sourceTree = "<group>"; };
+		5C42241E250B661E008CDCC4 /* YJFoodCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJFoodCell.m; sourceTree = "<group>"; };
 		CB5D570B1665CBFA111846EC /* Pods-WhatToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +182,8 @@
 				5C20377724FE34CE00CBCDD7 /* Groups */,
 				5C20377824FE34D400CBCDD7 /* Lists */,
 				5C20377924FE351D00CBCDD7 /* Results */,
+				5C422409250B0D7F008CDCC4 /* 数据导入 */,
+				5C422410250B1472008CDCC4 /* Framework */,
 				3E0689701F301905003E1D65 /* AppDelegate.h */,
 				3E0689711F301905003E1D65 /* AppDelegate.m */,
 				3E0689761F301905003E1D65 /* Main.storyboard */,
@@ -237,10 +249,11 @@
 			children = (
 				3E0689A21F306C26003E1D65 /* YJTableViewController.h */,
 				3E0689A31F306C26003E1D65 /* YJTableViewController.m */,
-				3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */,
-				3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */,
+				5C42241D250B661E008CDCC4 /* YJFoodCell.h */,
+				5C42241E250B661E008CDCC4 /* YJFoodCell.m */,
 				3E0689A81F306D3B003E1D65 /* YJFoods.h */,
 				3E0689A91F306D3B003E1D65 /* YJFoods.m */,
+				5C422420250B66BE008CDCC4 /* Edit */,
 			);
 			name = Lists;
 			sourceTree = "<group>";
@@ -252,6 +265,7 @@
 				5C20377424FE347500CBCDD7 /* YJResultController.m */,
 				5C20377A24FE38B000CBCDD7 /* YJResultManager.h */,
 				5C20377B24FE38B000CBCDD7 /* YJResultManager.m */,
+				5C4224012509FB23008CDCC4 /* YJAwardManager.swift */,
 				5CDE78F62509D3D0009645D2 /* Model */,
 			);
 			name = Results;
@@ -260,7 +274,6 @@
 		5C4224002509FAB0008CDCC4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				5C4224012509FB23008CDCC4 /* YJAwardManager.swift */,
 				5C4223FA2509F6D8008CDCC4 /* YJAward.xcdatamodeld */,
 				5C4224032509FC6E008CDCC4 /* Group+Method.swift */,
 				5C4223FE2509FA81008CDCC4 /* People+Method.swift */,
@@ -268,6 +281,33 @@
 				5C4224072509FDD1008CDCC4 /* Record+Method.swift */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		5C422409250B0D7F008CDCC4 /* 数据导入 */ = {
+			isa = PBXGroup;
+			children = (
+				5C42240A250B0DA5008CDCC4 /* YJImportController.swift */,
+			);
+			name = "数据导入";
+			sourceTree = "<group>";
+		};
+		5C422410250B1472008CDCC4 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				5C422417250B1680008CDCC4 /* YJProgressHUD.h */,
+				5C422418250B1680008CDCC4 /* YJProgressHUD.m */,
+				5C422413250B1588008CDCC4 /* MBProgressHUD.bundle */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		5C422420250B66BE008CDCC4 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				3E0689AB1F3071EA003E1D65 /* YJEditTableViewController.h */,
+				3E0689AC1F3071EA003E1D65 /* YJEditTableViewController.m */,
+			);
+			name = Edit;
 			sourceTree = "<group>";
 		};
 		5CDE78F62509D3D0009645D2 /* Model */ = {
@@ -410,6 +450,7 @@
 			files = (
 				3E06897D1F301905003E1D65 /* LaunchScreen.storyboard in Resources */,
 				054A39391FEE37E300978705 /* Localizable.strings in Resources */,
+				5C422414250B1588008CDCC4 /* MBProgressHUD.bundle in Resources */,
 				3E06897A1F301905003E1D65 /* Assets.xcassets in Resources */,
 				3E0689781F301905003E1D65 /* Main.storyboard in Resources */,
 			);
@@ -464,11 +505,14 @@
 				5C4224042509FC6E008CDCC4 /* Group+Method.swift in Sources */,
 				5C4223FF2509FA81008CDCC4 /* People+Method.swift in Sources */,
 				5C4223FC2509F6D8008CDCC4 /* YJAward.xcdatamodeld in Sources */,
+				5C42240B250B0DA5008CDCC4 /* YJImportController.swift in Sources */,
 				5C20377C24FE38B000CBCDD7 /* YJResultManager.m in Sources */,
 				3E0689751F301905003E1D65 /* ViewController.m in Sources */,
+				5C422419250B1680008CDCC4 /* YJProgressHUD.m in Sources */,
 				057DC8A51FEE0B080017CA8C /* YJObject.m in Sources */,
 				3E0689AA1F306D3B003E1D65 /* YJFoods.m in Sources */,
 				5C4224062509FD66008CDCC4 /* Honoree+Method.swift in Sources */,
+				5C42241F250B661E008CDCC4 /* YJFoodCell.m in Sources */,
 				3E0689721F301905003E1D65 /* AppDelegate.m in Sources */,
 				5C20377524FE347500CBCDD7 /* YJResultController.m in Sources */,
 				3E06896F1F301905003E1D65 /* main.m in Sources */,

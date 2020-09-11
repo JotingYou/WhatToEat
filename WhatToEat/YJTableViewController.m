@@ -11,11 +11,13 @@
 #import "YJGroups.h"
 #import "YJEditTableViewController.h"
 #import "YJFoods.h"
+#import "YJFoodCell.h"
 @interface YJTableViewController ()
 @property (weak,nonatomic) YJGroups *groups;
 @property (strong, nonatomic) UIBarButtonItem *playItem;
 @property (strong,nonatomic) Group *element;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *fileItem;
 @end
 
 @implementation YJTableViewController
@@ -39,7 +41,7 @@
     }else{
         self.playItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(playItemClicked:)];
     }
-    self.navigationItem.rightBarButtonItems = @[self.addItem,_playItem];
+    self.navigationItem.rightBarButtonItems = @[self.addItem,self.fileItem,_playItem];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -61,6 +63,7 @@
     }else{
         self.element.selected = true;
     }
+    [self.groups save];
     [self.navigationController popViewControllerAnimated:YES];
 
 }
@@ -76,17 +79,21 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.element.members.count;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"foodCell" forIndexPath:indexPath];
+    YJFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"foodCell" forIndexPath:indexPath];
     NSArray *people = self.element.members.allObjects;
     People *p = people[indexPath.row];
-    cell.textLabel.text = p.name;
+    cell.nameLabel.text = p.name;
+    cell.infoLabel.text = p.info;
+    cell.telLabel.text = p.tel;
     return cell;
 }
 
-
+#pragma mark - table view delegate
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -131,9 +138,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    YJEditTableViewController *vc = [segue destinationViewController];
-    vc.type = 0;
-    vc.element = self.element;
+    UIViewController *vc = [segue destinationViewController];
+    if ([vc isKindOfClass:YJEditTableViewController.class]) {
+        YJEditTableViewController *evc = (YJEditTableViewController *)vc;
+        evc.type = 0;
+        evc.element = self.element;
+    }else if ([vc isKindOfClass:[YJImportController class]]){
+        YJImportController *ic = (YJImportController *)vc;
+        ic.group = self.element;
+    }
+    
+
 }
 
 

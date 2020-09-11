@@ -8,29 +8,34 @@
 
 #import "YJGroups.h"
 #import "YJFoods.h"
+@interface YJGroups()
+@property (weak,nonatomic)YJAwardManager *awardManager;
+@end
 @implementation YJGroups
+-(YJAwardManager *)awardManager{
+    return [YJAwardManager shared];
+}
 -(instancetype)init{
     if (self = [super init]) {
         _groups = [[YJAwardManager shared] readGroups];
         if (_groups.count == 0) {
-            _groups = @[[YJFoods fruit]];
+            _groups = @[[YJFoods food]];
         }
         
     }
     return self;
 }
 -(void)addGroupWith:(NSString *)name and:(NSString *)info{
-    Group *g = [[YJAwardManager shared] insertGroup:name :info :true];
-    
+    Group *g = [[YJAwardManager shared] insertGroup:name :info :true];    
     NSMutableArray *ma = [NSMutableArray arrayWithArray:self.groups];
     [ma addObject:g];
     self.groups = ma;
     
-    [[YJAwardManager shared] save];
+    [self save];
 }
--(void)group:(Group *)group addPersonWithName:(NSString *)name Info:(NSString *)info{
-    [[YJAwardManager shared] insertPeople:name :info :group];
-    [[YJAwardManager shared] save];
+-(void)group:(Group *)group addPersonWithName:(NSString *)name Info:(NSString *)info Tel:(NSString *)tel{
+    [self.awardManager insertPeople:name :info :tel:group];
+    [self save];
 }
 +(instancetype)shared{
     static YJGroups *g;
@@ -42,18 +47,21 @@
 }
 -(void)deleteGroup:(Group *) group{
     for (People *p in group.members.allObjects) {
-        [[YJAwardManager shared] deletePeople:p];
+        [self.awardManager deletePeople:p];
     }
-    [[YJAwardManager shared] deleteGroup:group];
+    [self.awardManager deleteGroup:group];
     
     NSMutableArray *ma = [NSMutableArray arrayWithArray:self.groups];
     [ma removeObject:group];
     self.groups = ma;
     
-    [[YJAwardManager shared] save];
+    [self save];
 }
 -(void)deletePerson:(People *)p{
-    [[YJAwardManager shared] deletePeople:p];
-    [[YJAwardManager shared] save];
+    [self.awardManager deletePeople:p];
+    [self save];
+}
+-(void)save{
+    [self.awardManager save];
 }
 @end

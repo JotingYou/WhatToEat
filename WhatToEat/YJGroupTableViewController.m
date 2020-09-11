@@ -75,7 +75,7 @@
     
     return cell;    
 }
-
+#pragma mark - table view delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"toDetailSegue" sender:[NSNumber numberWithInteger:indexPath.row]];
 }

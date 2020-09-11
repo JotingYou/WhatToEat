@@ -29,6 +29,7 @@ extension Record{
           static func insert()->Record{
               let entity = NSEntityDescription.entity(forEntityName: entityName, in: YJAwardManager.shared.managedObjectContext)!
               let obj = Record.init(entity: entity, insertInto: YJAwardManager.shared.managedObjectContext)
+                obj.create_date = Date()
               return obj
 
           }

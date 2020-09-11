@@ -1,31 +1,28 @@
 PODS:
+  - HandyJSON (5.0.2)
   - JNWSpringAnimation (0.7.1)
-  - KissXML (5.3.1):
-    - KissXML/All (= 5.3.1)
-  - KissXML/Additions (5.3.1):
-    - KissXML/Core
-  - KissXML/All (5.3.1):
-    - KissXML/Additions
-    - KissXML/Core
-  - KissXML/Core (5.3.1)
   - MBProgressHUD (1.2.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - HandyJSON
   - JNWSpringAnimation (~> 0.7.1)
-  - KissXML
   - MBProgressHUD
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - HandyJSON
     - JNWSpringAnimation
-    - KissXML
     - MBProgressHUD
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   JNWSpringAnimation: cd4c2f4464324f63f176c3624ffccf205211a100
-  KissXML: 5c8e0f2e8b9f071d3e1ae123dec3eb5da615c10c
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6c06b3ccbaed8b5d7a8b77706d01d85e31003b0b
+PODFILE CHECKSUM: 11baac1bffe66f0ad592ec667c2f69ea76642cde
 
 COCOAPODS: 1.10.0.beta.2

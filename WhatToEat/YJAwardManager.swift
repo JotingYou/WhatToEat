@@ -34,8 +34,8 @@ class YJAwardManager:NSObject{
     @objc func readPeople() -> [People]?{
         return People.read()
     }
-    @objc func insertPeople(_ name:String,_ info:String?,_ group:Group) -> People {
-        return People.insert(name, info, group)
+    @objc func insertPeople(_ name:String,_ info:String?,_ tel:String?,_ group:Group) -> People {
+        return People.insert(name, info,tel,group)
     }
     @objc func deletePeople(_ p:People) {
         managedObjectContext.delete(p)
@@ -44,7 +44,7 @@ class YJAwardManager:NSObject{
     @objc func readRecords() -> [Record]?{
         return Record.read()
     }
-    @objc func insertRecord(_ name:String,_ info:String?) -> Record {
+    @objc func insertRecord() -> Record {
         return Record.insert()
     }
        
@@ -52,8 +52,8 @@ class YJAwardManager:NSObject{
     @objc func readHonorees() -> [Honoree]?{
         return Honoree.read()
     }
-    @objc func insertHonoree(_ degree:Int16) -> Honoree {
-        return Honoree.insert(degree)
+    @objc func insertHonoree(_ degree:Int16,_ person:People,_ record:Record) -> Honoree {
+        return Honoree.insert(degree,person,record)
     }
     //MARK:- Private
     @objc func save() -> Bool{

@@ -30,6 +30,7 @@ extension Group {
            let entity = NSEntityDescription.entity(forEntityName: entityName, in: YJAwardManager.shared.managedObjectContext)!
            let obj = Group.init(entity: entity, insertInto: YJAwardManager.shared.managedObjectContext)
            obj.setValues(name,info,selected)
+        obj.create_date = Date()
            return obj
 
        }

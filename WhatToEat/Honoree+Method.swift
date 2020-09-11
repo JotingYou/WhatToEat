@@ -26,14 +26,17 @@ extension Honoree {
               }
               return Array<Honoree>()
           }
-          static func insert(_ degree:Int16)->Honoree{
+        static func insert(_ degree:Int16,_ person:People,_ record:Record)->Honoree{
               let entity = NSEntityDescription.entity(forEntityName: entityName, in: YJAwardManager.shared.managedObjectContext)!
               let obj = Honoree.init(entity: entity, insertInto: YJAwardManager.shared.managedObjectContext)
-              obj.setValues(degree)
+              obj.setValues(degree,person,record)
+                obj.create_date = Date()
               return obj
 
           }
-          func setValues(_ degree:Int16) {
+        func setValues(_ degree:Int16,_ person:People,_ record:Record) {
             self.degree = degree
+            self.person = person
+            self.record = record
           }
 }
