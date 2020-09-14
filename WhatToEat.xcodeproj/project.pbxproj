@@ -35,6 +35,7 @@
 		5C422414250B1588008CDCC4 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C422413250B1588008CDCC4 /* MBProgressHUD.bundle */; };
 		5C422419250B1680008CDCC4 /* YJProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C422418250B1680008CDCC4 /* YJProgressHUD.m */; };
 		5C42241F250B661E008CDCC4 /* YJFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C42241E250B661E008CDCC4 /* YJFoodCell.m */; };
+		5CEFEA71250F4DA900D6A044 /* UITextView+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEFEA70250F4DA900D6A044 /* UITextView+Placeholder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		5C422418250B1680008CDCC4 /* YJProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJProgressHUD.m; sourceTree = "<group>"; };
 		5C42241D250B661E008CDCC4 /* YJFoodCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJFoodCell.h; sourceTree = "<group>"; };
 		5C42241E250B661E008CDCC4 /* YJFoodCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJFoodCell.m; sourceTree = "<group>"; };
+		5CEFEA70250F4DA900D6A044 /* UITextView+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Placeholder.swift"; sourceTree = "<group>"; };
 		CB5D570B1665CBFA111846EC /* Pods-WhatToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,10 +263,10 @@
 		5C20377924FE351D00CBCDD7 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				5C20377324FE347500CBCDD7 /* YJResultController.h */,
-				5C20377424FE347500CBCDD7 /* YJResultController.m */,
 				5C20377A24FE38B000CBCDD7 /* YJResultManager.h */,
 				5C20377B24FE38B000CBCDD7 /* YJResultManager.m */,
+				5C20377324FE347500CBCDD7 /* YJResultController.h */,
+				5C20377424FE347500CBCDD7 /* YJResultController.m */,
 				5C4224012509FB23008CDCC4 /* YJAwardManager.swift */,
 				5CDE78F62509D3D0009645D2 /* Model */,
 			);
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				5C42240A250B0DA5008CDCC4 /* YJImportController.swift */,
+				5CEFEA70250F4DA900D6A044 /* UITextView+Placeholder.swift */,
 			);
 			name = "数据导入";
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			files = (
 				5C4224022509FB23008CDCC4 /* YJAwardManager.swift in Sources */,
 				054A392F1FEE195300978705 /* YJGroups.m in Sources */,
+				5CEFEA71250F4DA900D6A044 /* UITextView+Placeholder.swift in Sources */,
 				3E0689AD1F3071EA003E1D65 /* YJEditTableViewController.m in Sources */,
 				3E0689A41F306C26003E1D65 /* YJTableViewController.m in Sources */,
 				5C4224042509FC6E008CDCC4 /* Group+Method.swift in Sources */,
@@ -686,11 +690,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1623;
 				DEVELOPMENT_TEAM = BFQM2YX9WF;
 				INFOPLIST_FILE = WhatToEat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.200914;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youjoting.WhatToEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WhatToEat/WhatToEat-Bridging-Header.h";
@@ -705,11 +710,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1623;
 				DEVELOPMENT_TEAM = BFQM2YX9WF;
 				INFOPLIST_FILE = WhatToEat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.200914;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youjoting.WhatToEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WhatToEat/WhatToEat-Bridging-Header.h";

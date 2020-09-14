@@ -117,29 +117,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9E-8K-C5a">
-                                            <rect key="frame" x="15" y="5" width="51.5" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <rect key="frame" x="15" y="10" width="48" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIK-uY-0gX">
-                                            <rect key="frame" x="206" y="18" width="132" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLY-hN-als">
+                                            <rect key="frame" x="15" y="34.5" width="23" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLY-hN-als">
-                                            <rect key="frame" x="15" y="29" width="26" height="18"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIK-uY-0gX">
+                                            <rect key="frame" x="308" y="14.5" width="20" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="VLY-hN-als" firstAttribute="top" secondItem="q9E-8K-C5a" secondAttribute="bottom" id="1Pv-59-fJp"/>
+                                        <constraint firstItem="VLY-hN-als" firstAttribute="top" secondItem="q9E-8K-C5a" secondAttribute="bottom" constant="3" id="1Pv-59-fJp"/>
                                         <constraint firstItem="ZIK-uY-0gX" firstAttribute="centerY" secondItem="eOt-wL-z4k" secondAttribute="centerY" id="3tY-rs-c4A"/>
                                         <constraint firstAttribute="trailing" secondItem="ZIK-uY-0gX" secondAttribute="trailing" constant="15" id="kGT-Mq-4iN"/>
-                                        <constraint firstItem="q9E-8K-C5a" firstAttribute="top" secondItem="eOt-wL-z4k" secondAttribute="top" constant="5" id="kKa-8o-4sm"/>
+                                        <constraint firstItem="q9E-8K-C5a" firstAttribute="top" secondItem="eOt-wL-z4k" secondAttribute="top" constant="10" id="kKa-8o-4sm"/>
                                         <constraint firstItem="q9E-8K-C5a" firstAttribute="leading" secondItem="eOt-wL-z4k" secondAttribute="leading" constant="15" id="p5B-rs-4II"/>
                                         <constraint firstItem="VLY-hN-als" firstAttribute="leading" secondItem="q9E-8K-C5a" secondAttribute="leading" id="z2r-Fo-6z0"/>
                                     </constraints>
@@ -248,10 +248,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sex-RA-j5d">
                                 <rect key="frame" x="20" y="64" width="335" height="583"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">[
-{"name":"🥟","info":"饺子"},
-{"name":"🍜","info":"泡面"},{"name":"🍚","info":"米饭"},{"name":"🍕","info":"披萨"}
-]</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>

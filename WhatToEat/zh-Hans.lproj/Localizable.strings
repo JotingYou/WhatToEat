@@ -5,8 +5,11 @@
   Created by Zhangguo Huang on 2017/12/23.
   Copyright © 2017年 明星科技. All rights reserved.
 */
-"Gotit" = "决定了";
-"ItisHeader" = "就是";
-"ItisFooter" = "了";
+//"Gotit" = "决定了";
+"Gotit" = "获得者";
+//"ItisHeader" = "就是";
+"ItisHeader" = "恭喜";
+//"ItisFooter" = "了";
+"ItisFooter" = "获奖";
 "Sure" = "好的";
 "Selected" = "已选";

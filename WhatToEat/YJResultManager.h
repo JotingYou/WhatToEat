@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(Boolean)addToFirst:(NSObject *)o;
 -(Boolean)addToSecond:(NSObject *)o;
 -(Boolean)addToThird:(NSObject *)o;
+-(void)reset;
 @end
 
 NS_ASSUME_NONNULL_END

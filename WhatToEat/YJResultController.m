@@ -26,12 +26,16 @@
     return [YJResultManager shared].third;
 }
 -(void)reloadData{
-
+    
     [self.tableView reloadData];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleInsetGrouped];
+    if (@available(iOS 13.0, *)) {
+        self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleInsetGrouped];
+    } else {
+        self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    }
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"elementCell"];

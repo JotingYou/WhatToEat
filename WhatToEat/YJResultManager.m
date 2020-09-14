@@ -20,8 +20,8 @@
 -(instancetype)init{
     if (self = [super init]) {
         _firstNumber = 1;
-        _secondNumber = 2;
-        _thirdNumber = 3;
+        _secondNumber = 5;
+        _thirdNumber = 10;
     }
     return self;
 }
@@ -56,6 +56,11 @@
         _third = [NSMutableArray array];
     }
     return _third;
+}
+-(void)reset{
+    [self.third removeAllObjects];
+    [self.first removeAllObjects];
+    [self.second removeAllObjects];
 }
 -(Boolean)add:(NSObject *)o{
     if ([self addToThird:o]) {

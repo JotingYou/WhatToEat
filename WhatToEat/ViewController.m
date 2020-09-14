@@ -54,11 +54,12 @@
     self.goButton.center = self.originalPoint;
     self.goButton.alpha = 1;
 }
--(void)initElements{
+-(void)reset{
     _allElement = nil;
+    [[YJResultManager shared]reset];
 }
 - (IBAction)initElements:(id)sender {
-    [self initElements];
+    [self reset];
     [YJProgressHUD showSuccess:@"重置成功"];
 }
 
